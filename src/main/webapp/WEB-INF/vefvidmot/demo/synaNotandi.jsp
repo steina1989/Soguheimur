@@ -6,6 +6,8 @@
  * Hrafnhildur Olga hoh44@hi.is
  * Ólafur Konráð oka4@hi.is
  * Steina Dögg sdv6@hi.is
+ 
+ Dynamic page showing previously submitted name string.
  -->
 
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>

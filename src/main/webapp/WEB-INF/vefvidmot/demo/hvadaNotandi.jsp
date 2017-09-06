@@ -5,6 +5,8 @@
  * Hrafnhildur Olga hoh44@hi.is
  * Ólafur Konráð oka4@hi.is
  * Steina Dögg sdv6@hi.is
+ 
+ Input form for the name of user.
  -->
 
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
