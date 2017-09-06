@@ -9,6 +9,7 @@
 	<configs>
 	</configs>
 	<autoconfigs>
+		<config>java:is.hi.byrjun.Application</config>
 	</autoconfigs>
 	<configSets>
 	</configSets>
