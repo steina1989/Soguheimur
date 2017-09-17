@@ -13,7 +13,7 @@
     <main>
       <form method="post" action="">
         <fieldset>
-          <legend>Notandi</legend>
+          <legend>Innskráning</legend>
           <div class="field">
             <label for="username">Notendanafn:</label>
             <input type="text" name="username" id="username" placeholder="hoh44" required="Verður að setja inn nafn">

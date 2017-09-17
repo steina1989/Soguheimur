@@ -44,6 +44,24 @@
             <label for="school">Skóli:</label>
             <input type="text" name="school" id="school" placeholder="Háskóli Íslands">
           </div>
+           <div class="field">
+            <label for="radio">Veldu mynd:</label>
+          </div>
+            <div class="field">
+              <label>
+                <input type="radio" value="0" name="number"> 1
+              </label>
+              <label>
+                <input type="radio" value="10" name="number" checked>2
+              </label>
+              <label>
+                <input type="radio" value="20" name="number"> 3
+              </label>
+              <label>
+                <input type="radio" value="30" name="number"> 4
+              </label>
+            </div>
+          
           <button>Senda inn</button>
         </fieldset>
       </form>
