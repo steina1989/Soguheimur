@@ -13,7 +13,11 @@
     <main>
       <form method="post" action="">
         <fieldset>
-          <legend>Notandi</legend>
+          <legend>Nýr Notandi</legend>
+          <div class="field">
+            <label for="name">Nafn:</label>
+            <input type="text" name="name" id="name" placeholder="Hrafnhildur Olga Hjaltadóttir" required="Verður að setja inn nafn">
+          </div>
           <div class="field">
             <label for="username">Notendanafn:</label>
             <input type="text" name="username" id="username" placeholder="hoh44" required="Verður að setja inn nafn">
@@ -31,6 +35,14 @@
             <label for="passwordb">Lykilorð, aftur:
             <input type="text" name="passwordb" required id="passwordb"> <em>Lykilorðin verða að vera þau sömu</em>
             </label>
+          </div>
+          <div class="field">
+            <label for="age">Aldur:</label>
+            <input type="text" name="age" id="age" placeholder="23" required="Verður að setja inn aldur">
+          </div>
+          <div class="field">
+            <label for="school">Skóli:</label>
+            <input type="text" name="school" id="school" placeholder="Háskóli Íslands">
           </div>
           <button>Senda inn</button>
         </fieldset>
