@@ -19,11 +19,16 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 
 @Controller
-@RequestMapping("/soguheimur") // Makes all path relative to /demo
+@RequestMapping("/soguheimur") // Makes all path relative to /soguheimur
 public class SoguheimurController {
 	
 	 @RequestMapping("/create")
 	 public String create(){
 	    	return "soguheimur/createProfile";
+	    }
+	 
+	 @RequestMapping("/logIn")
+	 public String logIn(){
+	    	return "soguheimur/logIn";
 	    }
 }
