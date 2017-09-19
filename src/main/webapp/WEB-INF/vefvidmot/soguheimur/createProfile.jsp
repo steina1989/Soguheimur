@@ -9,9 +9,9 @@
     <title>Skapa aðgang</title>
   </head>
   <body>
-    <h1>Skapa aðgang</h1>
+    <h1>Búa til aðgang</h1>
     <main>
-      <form method="post" action="">
+      <form method="POST" action="/soguheimur/newUser">
         <fieldset>
           <legend>Nýr Notandi</legend>
           <div class="field">
@@ -19,8 +19,8 @@
             <input type="text" name="name" id="name" placeholder="Hrafnhildur Olga Hjaltadóttir" required="Verður að setja inn nafn">
           </div>
           <div class="field">
-            <label for="username">Notendanafn:</label>
-            <input type="text" name="username" id="username" placeholder="hoh44" required="Verður að setja inn nafn">
+            <label for="nafn">Notendanafn:</label>
+            <input type="text" name="nafn" id="nafn" placeholder="Notendanafn" required="Verður að setja inn nafn">
           </div>
           <div class="field">
             <label for="email">Netfang:
@@ -28,12 +28,12 @@
             </label>
           </div>
           <div class="field">
-            <label for="passworda">Lykilorð:</label>
-            <input type="text" name="passworda" id="passworda" required>
+            <label for="lykilord">Lykilorð:</label>
+            <input type="text" name="lykilord" id="lykilord" required>
           </div>
           <div class="field">
-            <label for="passwordb">Lykilorð, aftur:
-            <input type="text" name="passwordb" required id="passwordb"> <em>Lykilorðin verða að vera þau sömu</em>
+            <label for="lykilordb">Lykilorð, aftur:
+            <input type="text" name="lykilordb" required id="lykilordb"> <em>Lykilorðin verða að vera þau sömu</em>
             </label>
           </div>
           <div class="field">
@@ -62,7 +62,7 @@
               </label>
             </div>
           
-          <input type="submit" value="Staðfesta" />
+          <input type="submit" value="Nýskráning"/>
         </fieldset>
       </form>
     </main>

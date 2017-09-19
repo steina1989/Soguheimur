@@ -34,6 +34,20 @@ public class SoguheimurController {
 	    	return "soguheimur/createProfile";
 	    }
 	 
+	 @RequestMapping(value = "/newUser", method = RequestMethod.POST)
+	    public String newUser(@RequestParam(value = "nafn", required = false)
+	            String nafn, ModelMap model) {
+
+	        if (soguheimurService.erNafnRett(nafn)) {
+	            Notandi k = new Notandi(nafn, "1234");
+	            model.addAttribute("notandi", k);
+	            return "soguheimur/newUser";
+	        } else {
+	            model.addAttribute("nafn", nafn);
+	            return "soguheimur/wrongUser";
+	        }
+	    }
+	 
 	 
 	 @RequestMapping("/logIn")
 	 public String logIn(){
