@@ -6,23 +6,23 @@
 <html lang="is">
   <head>
     <meta charset="utf-8">
-    <title>Skrá sig inn</title>
+    <title>Innskráning</title>
   </head>
   <body>
-    <h1>Skrá sig inn</h1>
+    <h1>Innskráning</h1>
     <main>
-      <form method="post" action="">
+      <form method="POST" action="/soguheimur/welcome">
         <fieldset>
           <legend>Innskráning</legend>
-          <div class="field">
-            <label for="username">Notendanafn:</label>
-            <input type="text" name="username" id="username" placeholder="hoh44" required="Verður að setja inn nafn">
+          <div>
+            <label for="nafn">Notendanafn:</label>
+            <input type="text" name="nafn" placeholder="Nafn" required="Verður að setja inn nafn">
           </div>
-          <div class="field">
-            <label for="passworda">Lykilorð:</label>
-            <input type="text" name="passworda" id="passworda" required>
+          <div>
+            <label for="lykilord">Lykilorð:</label>
+            <input type="text" name="lykilord" placeholder="Lykilorð" required="Verður að setja inn lykilorð">
           </div>
-          <button>Skrá inn</button>
+          <input type="submit" value="Innskráning"/>
         </fieldset>
       </form>
     </main>

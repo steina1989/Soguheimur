@@ -62,7 +62,7 @@
               </label>
             </div>
           
-          <button>Senda inn</button>
+          <input type="submit" value="Stağfesta" />
         </fieldset>
       </form>
     </main>
