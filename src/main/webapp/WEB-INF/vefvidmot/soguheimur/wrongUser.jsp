@@ -6,11 +6,11 @@
 <html lang="en">
 
 <head>
-    <title>Ekki réttu rNotandi </title>
+    <title>Ekki réttur Notandi </title>
 </head>
 <body>
 
-<h1>Eftirfarandi notandi er ekki skráður hjá okkur: ${nafn}</h1>
+<h1>Eftirfarandi notandi er ekki skráður hjá okkur: ${notandi.getNafn()}</h1>
 
 </body>
 
