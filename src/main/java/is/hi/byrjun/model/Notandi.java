@@ -28,9 +28,9 @@ public class Notandi {
         this.lykilord = lykilord;
     }
 
-    public Notandi(String n, String h) {
+    public Notandi(String n, String l) {
         nafn = n;
-        lykilord = h;
+        lykilord = l;
     }
 
     @Override

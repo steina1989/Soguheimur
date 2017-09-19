@@ -20,7 +20,7 @@
 </head>
 <body>
 
-<h1>Velkominn aftur ${nafn}</h1>
+<h1>Velkominn aftur ${notandi.getNafn()}</h1>
 
 </body>
 
