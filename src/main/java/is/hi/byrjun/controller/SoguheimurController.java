@@ -50,7 +50,7 @@ public class SoguheimurController {
 	            return "soguheimur/newUser";
 	        } else {
 	            model.addAttribute("nafn", name);
-	            return "soguheimur/wrongUser";
+	            return "soguheimur/registrationFailed";
 	        }
 	    }
 	 
