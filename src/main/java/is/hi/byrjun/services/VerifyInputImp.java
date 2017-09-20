@@ -15,7 +15,7 @@ public class VerifyInputImp implements VerifyInput{
 
     @Override
     public boolean checkValidName(String name) {
-        return false;
+        return true;
     }
     
 }

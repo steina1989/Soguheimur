@@ -71,7 +71,6 @@ public class SoguheimurController {
 	 @RequestMapping(value = "/welcome", method = RequestMethod.POST)
 	    public String welcome(@RequestParam(value = "nafn", required = false)
 	            String nafn, ModelMap model) {
-
 	        if (verifyInput.checkValidName(nafn)) {
 	            User k = new User(nafn, "1234");
 	            model.addAttribute("notandi", k);
