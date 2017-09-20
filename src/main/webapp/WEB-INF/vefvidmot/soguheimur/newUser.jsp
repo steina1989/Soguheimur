@@ -16,7 +16,7 @@
 <html lang="en">
 
 <head>
-    <title>Velkominn!</title>
+    <title>Velkomin!</title>
 </head>
 <body>
 

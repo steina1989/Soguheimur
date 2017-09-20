@@ -7,7 +7,7 @@
  * Ólafur Konráğ oka4@hi.is
  * Steina Dögg sdv6@hi.is
  
- Dynamic page showing previously submitted name string.
+ Displayed after successful login.
  -->
 
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
@@ -16,11 +16,11 @@
 <html lang="en">
 
 <head>
-    <title>Velkominn!</title>
+    <title>Velkomin!</title>
 </head>
 <body>
 
-<h1>Velkominn aftur ${notandi.getNafn()}</h1>
+<h1>Velkomin/n aftur ${notandi.getNafn()}</h1>
 
 </body>
 

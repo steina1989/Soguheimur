@@ -1,13 +1,15 @@
-/**
- * 
- */
-/**
- * @author hrafn
- *
- */
 package is.hi.byrjun.model;
 
-public class Notandi {
+/**
+ * @author Ásgerður Inna aia11@hi.is
+ * @author Hrafnhildur Olga hoh44@hi.is
+ * @author Ólafur Konráð oka4@hi.is
+ * @author Steina Dögg sdv6@hi.is
+ * 
+ * Model class for a user.
+ */
+
+public class User {
 
     private String nafn;
     private String lykilord;
@@ -28,7 +30,7 @@ public class Notandi {
         this.lykilord = lykilord;
     }
 
-    public Notandi(String n, String l) {
+    public User(String n, String l) {
         nafn = n;
         lykilord = l;
     }

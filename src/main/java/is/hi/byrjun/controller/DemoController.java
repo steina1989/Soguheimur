@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * Authors:
- * Ásgerður Inna aia11@hi.is
- * Hrafnhildur Olga hoh44@hi.is
- * Ólafur Konráð oka4@hi.is
- * Steina Dögg sdv6@hi.is
+ * @author Ásgerður Inna aia11@hi.is
+ * @author Hrafnhildur Olga hoh44@hi.is
+ * @author Ólafur Konráð oka4@hi.is
+ * @author Steina Dögg sdv6@hi.is
  * 
- * Controller for the form.
+ * Controller for the form
  */
+
 
 @Controller
 @RequestMapping("/demo") // Makes all path relative to /demo
