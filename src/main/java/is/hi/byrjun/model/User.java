@@ -1,44 +1,45 @@
 package is.hi.byrjun.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * @author Ásgerður Inna aia11@hi.is
  * @author Hrafnhildur Olga hoh44@hi.is
  * @author Ólafur Konráð oka4@hi.is
  * @author Steina Dögg sdv6@hi.is
  * 
- * Model class for a user.
+ *         Model class for a user.
  */
 
+@Entity
+@Table(name = "users")
 public class User {
 
-    private String nafn;
-    private String lykilord;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	private String name;
 
-    public String getNafn() {
-        return nafn;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setNafn(String nafn) {
-        this.nafn = nafn;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public String getLykilord() {
-        return lykilord;
-    }
 
-    public void setLykilord(String lykilord) {
-        this.lykilord = lykilord;
-    }
+	public User(String n, String l) {
+		name = n;
+	}
 
-    public User(String n, String l) {
-        nafn = n;
-        lykilord = l;
-    }
-
-    @Override
-    public String toString() {
-        return String.format("<BR>" + "nafn: " + nafn + "<BR>"
-                + "lykilord: " + lykilord);
-    }
+	@Override
+	public String toString() {
+		return String.format("<BR>" + "nafn: " + name + "<BR>" + "lykilord: ");
+	}
 
 }

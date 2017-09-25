@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import is.hi.byrjun.model.User;
-import is.hi.byrjun.services.VerifyInput;
+import is.hi.byrjun.services.UserService;
 
 
 /**
@@ -22,10 +22,10 @@ import is.hi.byrjun.services.VerifyInput;
  */
 @Controller
 @RequestMapping("/soguheimur") // Makes all path relative to /soguheimur
-public class SoguheimurController {
+public class UserController {
 	
 	 @Autowired
-	    VerifyInput verifyInput;
+	    UserService userService;
 	/*
 	 * Returns the createProfile.jsp file.
 	 */
@@ -44,9 +44,11 @@ public class SoguheimurController {
 	    public String newUser(@RequestParam(value = "nafn", required = false)
 	            String name, ModelMap model) {
 
-	        if (verifyInput.checkValidName(name)) {
+	        if (userService.checkValidName(name)) {
 	            User k = new User(name, "1234");
 	            model.addAttribute("notandi", k);
+	            System.out.println("Saved the user");
+	            userService.save(k);
 	            return "soguheimur/newUser";
 	        } else {
 	            model.addAttribute("nafn", name);
@@ -71,8 +73,9 @@ public class SoguheimurController {
 	 @RequestMapping(value = "/welcome", method = RequestMethod.POST)
 	    public String welcome(@RequestParam(value = "nafn", required = false)
 	            String nafn, ModelMap model) {
-	        if (verifyInput.checkValidName(nafn)) {
+	        if (userService.checkValidName(nafn)) {
 	            User k = new User(nafn, "1234");
+	            
 	            model.addAttribute("notandi", k);
 	            return "soguheimur/welcome";
 	        } else {
