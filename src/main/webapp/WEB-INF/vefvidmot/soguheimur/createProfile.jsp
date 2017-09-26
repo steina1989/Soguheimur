@@ -47,8 +47,8 @@
             </label>
           </div>
           <div class="field">
-            <label for="age">Aldur:</label>
-            <input type="text" name="age" id="age" placeholder="Aldur" required="Verður að setja inn aldur">
+            <label for="bday">Fæðingardagur:</label>
+            <input type="date" name="bday" required="Verður að setja inn aldur">
           </div>
           <div class="field">
             <label for="school">Skóli:</label>
