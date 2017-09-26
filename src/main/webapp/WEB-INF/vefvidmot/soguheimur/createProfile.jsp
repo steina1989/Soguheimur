@@ -26,33 +26,33 @@
           <legend>Nýr Notandi</legend>
           <div class="field">
             <label for="name">Nafn:</label>
-            <input type="text" name="name" id="name" placeholder="Hrafnhildur Olga Hjaltadóttir" required="Verður að setja inn nafn">
+            <input type="text" name="name" id="name" placeholder="Fullt Nafn" required="Verður að setja inn nafn">
           </div>
           <div class="field">
-            <label for="nafn">Notendanafn:</label>
-            <input type="text" name="nafn" id="nafn" placeholder="Notendanafn" required="Verður að setja inn nafn">
+            <label for="username">Notendanafn:</label>
+            <input type="text" name="username" id="username" placeholder="Notendanafn" required="Verður að setja inn nafn">
           </div>
           <div class="field">
             <label for="email">Netfang:
-            <input type="email" name="email" id="email" placeholder="hoh44@hi.is" required> <em>Netfang verður að innihalda "@" merki</em>
+            <input type="email" name="email" id="email" placeholder="Netfang" required> <em>Netfang verður að innihalda "@" merki</em>
             </label>
           </div>
           <div class="field">
             <label for="lykilord">Lykilorð:</label>
-            <input type="text" name="lykilord" id="lykilord" required>
+            <input type="password" name="lykilord" id="lykilord" placeholder="Lykilorð" required>
           </div>
           <div class="field">
             <label for="lykilordb">Lykilorð, aftur:
-            <input type="text" name="lykilordb" required id="lykilordb"> <em>Lykilorðin verða að vera þau sömu</em>
+            <input type="password" name="lykilordb" id="lykilordb" placeholder="Lykilorð aftur" required> <em>Lykilorðin verða að vera þau sömu</em>
             </label>
           </div>
           <div class="field">
             <label for="age">Aldur:</label>
-            <input type="text" name="age" id="age" placeholder="23" required="Verður að setja inn aldur">
+            <input type="text" name="age" id="age" placeholder="Aldur" required="Verður að setja inn aldur">
           </div>
           <div class="field">
             <label for="school">Skóli:</label>
-            <input type="text" name="school" id="school" placeholder="Háskóli Íslands">
+            <input type="text" name="school" id="school" placeholder="Skólinn þinn">
           </div>
            <div class="field">
             <label for="radio">Veldu mynd:</label>

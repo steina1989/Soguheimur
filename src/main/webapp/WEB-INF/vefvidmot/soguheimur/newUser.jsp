@@ -20,7 +20,7 @@
 </head>
 <body>
 
-<h1>Takk fyrir nýskráninguna ${notandi.getName()}</h1>
+<h1>Takk fyrir nýskráninguna ${username}</h1>
 
 </body>
 

@@ -20,7 +20,7 @@
 </head>
 <body>
 
-<h1>Velkomin/n aftur ${notandi.getNafn()}</h1>
+<h1>Velkomin/n aftur ${notandi.getName()}</h1>
 
 </body>
 

@@ -20,7 +20,7 @@
 </head>
 <body>
 
-<h1>Eftirfarandi notandi er ekki skráður hjá okkur: ${nafn}</h1>
+<h1>Eftirfarandi notandi er ekki skráður hjá okkur: ${username}</h1>
 
 </body>
 

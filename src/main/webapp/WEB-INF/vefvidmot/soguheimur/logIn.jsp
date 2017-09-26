@@ -25,12 +25,12 @@
         <fieldset>
           <legend>Innskráning</legend>
           <div>
-            <label for="nafn">Notendanafn:</label>
-            <input type="text" name="nafn" placeholder="Nafn" required="Verður að setja inn nafn">
+            <label for="username">Notendanafn:</label>
+            <input type="text" name="username" placeholder="Notendanafn" required="Verður að setja inn nafn">
           </div>
           <div>
             <label for="lykilord">Lykilorð:</label>
-            <input type="text" name="lykilord" placeholder="Lykilorð" required="Verður að setja inn lykilorð">
+            <input type="password" name="lykilord" placeholder="Lykilorð" required="Verður að setja inn lykilorð">
           </div>
           <input type="submit" value="Innskráning"/>
         </fieldset>

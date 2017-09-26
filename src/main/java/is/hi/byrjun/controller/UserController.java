@@ -36,22 +36,22 @@ public class UserController {
 	 
 	 /**
 	  * 
-	  * @param name
+	  * @param username
 	  * @param model
 	  * @return a jsp page depending on success of user creation.
 	  */
 	 @RequestMapping(value = "/newUser", method = RequestMethod.POST)
-	    public String newUser(@RequestParam(value = "nafn", required = false)
-	            String name, ModelMap model) {
+	    public String newUser(@RequestParam(value = "username", required = false)
+	            String username, ModelMap model) {
 
-	        if (userService.checkValidName(name)) {
-	            User k = new User(name, "1234");
+	        if (userService.checkValidName(username)) {
+	            User k = new User(username, "1234");
 	            model.addAttribute("notandi", k);
 	            System.out.println("Saved the user");
 	            userService.save(k);
 	            return "soguheimur/newUser";
 	        } else {
-	            model.addAttribute("nafn", name);
+	            model.addAttribute("username", username);
 	            return "soguheimur/registrationFailed";
 	        }
 	    }
@@ -67,19 +67,19 @@ public class UserController {
 	 
 	 /**
 	  * Welcomes and adds a new user that has tried submit their registration details.
-	  * @param nafn name of user
+	  * @param username name of user
 	  * @return welcome page or wrongUser page.
 	  */
 	 @RequestMapping(value = "/welcome", method = RequestMethod.POST)
-	    public String welcome(@RequestParam(value = "nafn", required = false)
-	            String nafn, ModelMap model) {
-	        if (userService.checkValidName(nafn)) {
-	            User k = new User(nafn, "1234");
+	    public String welcome(@RequestParam(value = "username", required = false)
+	            String username, ModelMap model) {
+	        if (userService.checkValidName(username)) {
+	            User k = new User(username, "1234");
 	            
 	            model.addAttribute("notandi", k);
 	            return "soguheimur/welcome";
 	        } else {
-	            model.addAttribute("nafn", nafn);
+	            model.addAttribute("username", username);
 	            return "soguheimur/wrongUser";
 	        }
 	    }
