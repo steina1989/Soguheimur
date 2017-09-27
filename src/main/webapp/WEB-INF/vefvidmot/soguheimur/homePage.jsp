@@ -7,7 +7,7 @@
  * Ólafur Konráð oka4@hi.is
  * Steina Dögg sdv6@hi.is
  
- Page displayed when user submits wrong credentials.
+ Displayed after you follow the link from your log in page.
  -->
 
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
@@ -16,11 +16,21 @@
 <html lang="en">
 
 <head>
-    <title>Ekki réttur Notandi </title>
+    <title>Heimasvæðið</title>
 </head>
 <body>
 
-<h1>Eftirfarandi notandi er ekki skráður hjá okkur: ${username}</h1>
+<h1>Heimasvæðið</h1>
+<!-- 
+*Following the link takes you to the page to submit stories.
+ -->
+<div>
+	<p>Má bjóða þér að senda inn nýja sögu?</p>
+	<a href="/soguheimur/story">Senda inn sögu</a>
+</div>
+<div>
+	<p>Má bjóða þér að skoða sögurnar þínar?</p>
+</div>
 
 </body>
 

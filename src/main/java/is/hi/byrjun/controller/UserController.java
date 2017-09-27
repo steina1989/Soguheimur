@@ -80,7 +80,45 @@ public class UserController {
 	            return "soguheimur/welcome";
 	        } else {
 	            model.addAttribute("username", username);
-	            return "soguheimur/wrongUser";
+	            return "soguheimur/error";
 	        }
 	    }
+	 
+		/*
+		 * Returns the homePage.jsp file.
+		 */
+		 @RequestMapping("/homePage")
+		 public String homePage(){
+		    	return "soguheimur/homePage";
+		    }
+		 
+		 /*
+		 * Returns the submitStory.jsp file.
+		 */
+		 @RequestMapping("/story")
+			 public String Story(){
+			    	return "soguheimur/submitStory";
+			    }
+			 
+		 /**
+		  * 
+		  * @param titill
+		  * @param model
+		  * @return a jsp page depending on success of user submition of a story.
+		  * INCOMPLETE!!!
+		  */
+		 @RequestMapping(value = "/newStory", method = RequestMethod.POST)
+		    public String newStory(@RequestParam(value = "title", required = false)
+		            String title, ModelMap model) {
+
+				 return "soguheimur/newStory";
+			    }
+			 
+		 /*
+		  * Returns the error.jsp file.
+		  */
+		 @RequestMapping("/error")
+		 	public String story(){
+			    	return "soguheimur/error";
+		 	}
 }

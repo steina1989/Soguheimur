@@ -22,6 +22,10 @@
 
 <h1>Takk fyrir nýskráninguna ${username}</h1>
 
+<div>
+	<p>Má bjóða þér að halda áfram á <a href="/soguheimur/homePage">heimasvæðið</a> þitt?</p>
+</div>
+
 </body>
 
 </html>

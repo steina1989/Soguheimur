@@ -7,7 +7,7 @@
  * Ólafur Konráð oka4@hi.is
  * Steina Dögg sdv6@hi.is
  
- Displayed after successful login.
+ Dynamic page showing previously submitted title string.
  -->
 
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
@@ -16,15 +16,11 @@
 <html lang="en">
 
 <head>
-    <title>Velkomin!</title>
+    <title>Ný Saga</title>
 </head>
 <body>
 
-<h1>Velkomin/n aftur ${notandi.getFullName()}</h1>
-
-<div>
-	<p>Má bjóða þér að halda áfram á <a href="/soguheimur/homePage">heimasvæðið</a> þitt?</p>
-</div>
+<h1>Sagan hefur verið send inn!</h1>
 
 </body>
 

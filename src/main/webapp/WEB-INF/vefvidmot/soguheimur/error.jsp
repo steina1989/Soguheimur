@@ -7,7 +7,7 @@
  * Ólafur Konráð oka4@hi.is
  * Steina Dögg sdv6@hi.is
  
- Displayed after successful login.
+ Page displayed when something goes wrong.
  -->
 
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
@@ -16,15 +16,11 @@
 <html lang="en">
 
 <head>
-    <title>Velkomin!</title>
+    <title>Eitthvað fór úrskeiðis</title>
 </head>
 <body>
 
-<h1>Velkomin/n aftur ${notandi.getFullName()}</h1>
-
-<div>
-	<p>Má bjóða þér að halda áfram á <a href="/soguheimur/homePage">heimasvæðið</a> þitt?</p>
-</div>
+<h1>Eitthvað hefur farið úrskeiðis! Vinsamlegast reynið aftur</h1>
 
 </body>
 
