@@ -26,6 +26,8 @@ public class UserController {
 	
 	 @Autowired
 	    UserService userService;
+	 
+	
 	/*
 	 * Returns the createProfile.jsp file.
 	 */
@@ -62,6 +64,8 @@ public class UserController {
 	  */
 	 @RequestMapping("/logIn")
 	 public String logIn(){
+		 User i = new User ("admin", "123");
+		 userService.save(i);
 	    	return "soguheimur/logIn";
 	    }
 	 

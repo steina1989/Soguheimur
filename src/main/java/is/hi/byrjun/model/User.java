@@ -31,7 +31,13 @@ public class User {
 	private String email;
 	private String aboutMe;
 	private String school;
+	private String passwordHash;
 	
+	public User(String userName, String passwordHash) {
+		this.userName = userName;
+		this.passwordHash = passwordHash;
+		
+	};
 
 	public Long getId() {
 		return id;
@@ -78,6 +84,14 @@ public class User {
 	}
 
 
+	public String getPasswordHash() {
+		return passwordHash;
+	}
+
+	public void setPasswordHash(String passwordHash) {
+		this.passwordHash = passwordHash;
+	}
+
 	public void setAboutMe(String aboutMe) {
 		this.aboutMe = aboutMe;
 	}
@@ -107,9 +121,6 @@ public class User {
 		this.fullName = name;
 	}
 
-	public User(String n, String l) {
-		fullName = n;
-	}
 
 	@Override
 	public String toString() {
