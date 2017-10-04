@@ -9,29 +9,23 @@ import is.hi.byrjun.model.User;
 import is.hi.byrjun.repository.UserRepository;
 
 /**
- * Implementation of the methods of VeryfiInput
+ * User services and connection to the user repository.
  * 
  * @author Hrafnhildur Olga hoh44@hi.is
  * @author Steina Dögg Vigfúsdóttir sdv6@hi.is
  */
 @Service
-public class UserServiceImp implements UserService{
+public class PublicationService {
 	@Autowired UserRepository userRep;
 
-    @Override
+
     public boolean checkValidName(String name) {
-//        String [] splitName = name.split(" ");
-//        System.out.println(splitName.length);
-//        return splitName.length > 1;
     	return true;
     }
-    
-    @Override
     public List<User> allUsers() {
         return userRep.findAll();   
     }
     
-    @Override
     public User save(User user) {
         return userRep.save(user);
     }

@@ -16,12 +16,12 @@
 <html lang="en">
 
 <head>
-    <title>Lesa sÃ¶gu</title>
+    <title>Lesa sögu</title>
 </head>
 <body>
 
 <h1>Sagan ${storyTitle}</h1>
-<p>%{storyText}</p>
+<p>${storyText}</p>
 
 </body>
 

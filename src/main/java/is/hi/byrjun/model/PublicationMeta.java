@@ -24,15 +24,25 @@ public class PublicationMeta {
 	
 	private String title;
 	private Date date;
-	private User author;
 	private int rating;
 	private ArrayList<String> tags;
+	private String text;
 	
-	public PublicationMeta(User author, String title)
+	public PublicationMeta(String title, String text)
 	{
-		this.author = author;
 		this.title = title;
+		this.text = text;
 	}
+	
+	public String getText() {
+		return text;
+	}
+
+
+	public void setText(String text) {
+		this.text = text;
+	}
+
 	
 	
 	public String getTitle() {
@@ -53,12 +63,8 @@ public class PublicationMeta {
 	public void setDate(Date date) {
 		this.date = date;
 	}
-	public User getAuthor() {
-		return author;
-	}
-	public void setAuthor(User author) {
-		this.author = author;
-	}
+
+
 	public int getRating() {
 		return rating;
 	}
