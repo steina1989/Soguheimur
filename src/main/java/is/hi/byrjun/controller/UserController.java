@@ -122,7 +122,7 @@ public class UserController {
 		  * Returns the error.jsp file.
 		  */
 		 @RequestMapping("/error")
-		 	public String story(){
+		 	public String error(){
 			    	return "soguheimur/error";
 		 	}
 }

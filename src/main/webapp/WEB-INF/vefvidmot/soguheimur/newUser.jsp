@@ -2,10 +2,10 @@
 
 <!-- 
  * Authors:
- * Ásgerður Inna aia11@hi.is
+ * ï¿½sgerï¿½ur Inna aia11@hi.is
  * Hrafnhildur Olga hoh44@hi.is
- * Ólafur Konráð oka4@hi.is
- * Steina Dögg sdv6@hi.is
+ * ï¿½lafur Konrï¿½ï¿½ oka4@hi.is
+ * Steina Dï¿½gg sdv6@hi.is
  
  Dynamic page showing previously submitted name string.
  -->
@@ -16,14 +16,15 @@
 <html lang="en">
 
 <head>
+	<meta charset="utf-8">
     <title>Velkomin!</title>
 </head>
 <body>
 
-<h1>Takk fyrir nýskráninguna ${username}</h1>
+<h1>Takk fyrir nï¿½skrï¿½ninguna ${username}</h1>
 
 <div>
-	<p>Má bjóða þér að halda áfram á <a href="/soguheimur/homePage">heimasvæðið</a> þitt?</p>
+	<p>Mï¿½ bjï¿½ï¿½a ï¿½ï¿½r aï¿½ halda ï¿½fram ï¿½ <a href="/soguheimur/homePage">heimasvï¿½ï¿½iï¿½</a> ï¿½itt?</p>
 </div>
 
 </body>

@@ -2,10 +2,10 @@
 
 <!-- 
  * Authors:
- * Ásgerður Inna aia11@hi.is
+ * ï¿½sgerï¿½ur Inna aia11@hi.is
  * Hrafnhildur Olga hoh44@hi.is
- * Ólafur Konráð oka4@hi.is
- * Steina Dögg sdv6@hi.is
+ * ï¿½lafur Konrï¿½ï¿½ oka4@hi.is
+ * Steina Dï¿½gg sdv6@hi.is
  
  The login page.
  -->
@@ -13,26 +13,26 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<html lang="is">
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Innskráning</title>
+    <title>Innskrï¿½ning</title>
   </head>
   <body>
-    <h1>Innskráning</h1>
+    <h1>Innskrï¿½ning</h1>
     <main>
       <form method="POST" action="/soguheimur/welcome">
         <fieldset>
-          <legend>Innskráning</legend>
+          <legend>Innskrï¿½ning</legend>
           <div>
             <label for="username">Notendanafn:</label>
-            <input type="text" name="username" placeholder="Notendanafn" required="Verður að setja inn nafn">
+            <input type="text" name="username" placeholder="Notendanafn" required="Verï¿½ur aï¿½ setja inn nafn">
           </div>
           <div>
-            <label for="lykilord">Lykilorð:</label>
-            <input type="password" name="lykilord" placeholder="Lykilorð" required="Verður að setja inn lykilorð">
+            <label for="lykilord">Lykilorï¿½:</label>
+            <input type="password" name="lykilord" placeholder="Lykilorï¿½" required="Verï¿½ur aï¿½ setja inn lykilorï¿½">
           </div>
-          <input type="submit" value="Innskráning"/>
+          <input type="submit" value="Innskrï¿½ning"/>
         </fieldset>
       </form>
     </main>

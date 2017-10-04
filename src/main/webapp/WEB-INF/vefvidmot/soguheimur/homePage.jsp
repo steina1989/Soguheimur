@@ -2,10 +2,10 @@
 
 <!-- 
  * Authors:
- * Ásgerður Inna aia11@hi.is
+ * ï¿½sgerï¿½ur Inna aia11@hi.is
  * Hrafnhildur Olga hoh44@hi.is
- * Ólafur Konráð oka4@hi.is
- * Steina Dögg sdv6@hi.is
+ * ï¿½lafur Konrï¿½ï¿½ oka4@hi.is
+ * Steina Dï¿½gg sdv6@hi.is
  
  Displayed after you follow the link from your log in page.
  -->
@@ -16,20 +16,21 @@
 <html lang="en">
 
 <head>
-    <title>Heimasvæðið</title>
+	<meta charset="utf-8">
+    <title>Heimasvï¿½ï¿½iï¿½</title>
 </head>
 <body>
 
-<h1>Heimasvæðið</h1>
+<h1>Heimasvï¿½ï¿½iï¿½</h1>
 <!-- 
 *Following the link takes you to the page to submit stories.
  -->
 <div>
-	<p>Má bjóða þér að senda inn nýja sögu?</p>
-	<a href="/soguheimur/story">Senda inn sögu</a>
+	<p>Mï¿½ bjï¿½ï¿½a ï¿½ï¿½r aï¿½ senda inn nï¿½ja sï¿½gu?</p>
+	<a href="/soguheimur/story">Senda inn sï¿½gu</a>
 </div>
 <div>
-	<p>Má bjóða þér að skoða sögurnar þínar?</p>
+	<p>Mï¿½ bjï¿½ï¿½a ï¿½ï¿½r aï¿½ skoï¿½a sï¿½gurnar ï¿½ï¿½nar?</p>
 </div>
 
 </body>

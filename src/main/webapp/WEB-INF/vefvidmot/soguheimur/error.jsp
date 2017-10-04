@@ -2,10 +2,10 @@
 
 <!-- 
  * Authors:
- * Ásgerður Inna aia11@hi.is
+ * ï¿½sgerï¿½ur Inna aia11@hi.is
  * Hrafnhildur Olga hoh44@hi.is
- * Ólafur Konráð oka4@hi.is
- * Steina Dögg sdv6@hi.is
+ * ï¿½lafur Konrï¿½ï¿½ oka4@hi.is
+ * Steina Dï¿½gg sdv6@hi.is
  
  Page displayed when something goes wrong.
  -->
@@ -16,11 +16,12 @@
 <html lang="en">
 
 <head>
-    <title>Eitthvað fór úrskeiðis</title>
+	<meta charset="utf-8">
+    <title>Eitthvaï¿½ fï¿½r ï¿½rskeiï¿½is</title>
 </head>
 <body>
 
-<h1>Eitthvað hefur farið úrskeiðis! Vinsamlegast reynið aftur</h1>
+<h1>Eitthvaï¿½ hefur fariï¿½ ï¿½rskeiï¿½is! Vinsamlegast reyniï¿½ aftur</h1>
 
 </body>
 

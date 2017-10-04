@@ -2,10 +2,10 @@
 
 <!-- 
  * Authors:
- * Ásgerður Inna aia11@hi.is
+ * ï¿½sgerï¿½ur Inna aia11@hi.is
  * Hrafnhildur Olga hoh44@hi.is
- * Ólafur Konráð oka4@hi.is
- * Steina Dögg sdv6@hi.is
+ * ï¿½lafur Konrï¿½ï¿½ oka4@hi.is
+ * Steina Dï¿½gg sdv6@hi.is
  
  Displayed after following the link from the user's home page to submit a story.
  -->
@@ -16,13 +16,14 @@
 <html lang="en">
 
 <head>
-    <title>Senda inn Sögu</title>
+	<meta charset="utf-8">
+    <title>Senda inn Sï¿½gu</title>
 </head>
 <body>
 
-<h1>Söguheimur</h1>
+<h1>Sï¿½guheimur</h1>
 
-<h2>Hér getur þú sent inn söguna þína</h2>
+<h2>Hï¿½r getur ï¿½ï¿½ sent inn sï¿½guna ï¿½ï¿½na</h2>
 
 	<form method="POST" action="/soguheimur/newStory">
         <div class="form-group">
@@ -33,7 +34,7 @@
           <div>
             <label class="" for="new-entry-text">Texti:</label>
           </div>
-          <textarea id="new-entry" name="text" class="form-control" rows="10" cols="40" placeholder="Sagan þín..."></textarea>
+          <textarea id="new-entry" name="text" class="form-control" rows="10" cols="40" placeholder="Sagan ï¿½ï¿½n..."></textarea>
         </div>
         <input type="submit" value="Senda Inn"/>
       </form>
