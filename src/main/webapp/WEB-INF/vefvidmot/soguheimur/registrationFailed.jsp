@@ -10,12 +10,11 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-    <title>NÃ½skrÃ¡ning virkaÃ°i ekki</title>
+    <title>Nıskráning virkaği ekki</title>
 </head>
 <body>
 
-<h1>Villa varÃ° viÃ° nÃ½skrÃ¡ningu</h1>
+<h1>Villa varğ viğ nıskráningu</h1>
 
 </body>
 
