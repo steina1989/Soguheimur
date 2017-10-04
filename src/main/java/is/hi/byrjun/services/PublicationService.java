@@ -5,7 +5,10 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import is.hi.byrjun.model.PublicationMeta;
 import is.hi.byrjun.model.User;
+import is.hi.byrjun.repository.PublicationRepository;
 import is.hi.byrjun.repository.UserRepository;
 
 /**
@@ -16,18 +19,15 @@ import is.hi.byrjun.repository.UserRepository;
  */
 @Service
 public class PublicationService {
-	@Autowired UserRepository userRep;
+	@Autowired PublicationRepository pubRep;
 
-
-    public boolean checkValidName(String name) {
-    	return true;
-    }
-    public List<User> allUsers() {
-        return userRep.findAll();   
+    
+    public PublicationMeta save(PublicationMeta pub) {
+        return pubRep.save(pub);
     }
     
-    public User save(User user) {
-        return userRep.save(user);
+    public PublicationMeta findById(long id) {
+    	return pubRep.findById(id);
     }
     
 }

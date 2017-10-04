@@ -20,7 +20,7 @@ public class PublicationMeta {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private long id;
 	
 	private String title;
 	private Date date;
@@ -32,6 +32,10 @@ public class PublicationMeta {
 	{
 		this.title = title;
 		this.text = text;
+	}
+	
+	public PublicationMeta() {
+		
 	}
 	
 	public String getText() {
@@ -51,10 +55,10 @@ public class PublicationMeta {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public int getId() {
+	public long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 	public Date getDate() {
@@ -63,7 +67,6 @@ public class PublicationMeta {
 	public void setDate(Date date) {
 		this.date = date;
 	}
-
 
 	public int getRating() {
 		return rating;

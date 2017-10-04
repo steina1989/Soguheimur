@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import is.hi.byrjun.model.PublicationMeta;
 import is.hi.byrjun.model.User;
+import is.hi.byrjun.services.PublicationService;
 import is.hi.byrjun.services.UserService;
 
 
@@ -25,7 +27,9 @@ import is.hi.byrjun.services.UserService;
 public class UserController {
 	
 	 @Autowired
-	    UserService userService;
+	 UserService userService;
+	 @Autowired
+	 PublicationService publicationService;	
 	 
 	
 	/*
@@ -112,11 +116,13 @@ public class UserController {
 		  * INCOMPLETE!!!
 		  */
 		 @RequestMapping(value = "/newStory", method = RequestMethod.POST)
-		    public String newStory(@RequestParam(value = "title", required = false)
-		            String title, ModelMap model) {
-
-				 return "soguheimur/newStory";
-			    }
+		 public String newStory(@RequestParam(value = "title")
+		 String title, @RequestParam(value="text") String text) {
+			 
+			 PublicationMeta pub = new PublicationMeta(title,text);
+			 publicationService.save(pub);
+			 return "soguheimur/newStory";
+		 }
 			 
 		 /*
 		  * Returns the error.jsp file.

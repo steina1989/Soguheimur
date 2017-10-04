@@ -30,21 +30,23 @@ public class SoguheimurController {
 	 @Autowired
 	    PublicationService pubService;
 	
-	
 	/*
 	 * Returns the createProfile.jsp file.
 	 */
 	 @RequestMapping(value="/{id}")
 	 public String viewStory(@PathVariable("id") long id, ModelMap model) {
 		 
-		 
-		 // TO DO: sækja söguna gegnum gagnagrunn, en ekki búa bara til random sögu.
-		 PublicationMeta publicationMeta = new PublicationMeta("Þursahamar. Bók 1","Einusinni var eitthvað og á að koma í nýrri línu");
-		 
-		 
-		 model.addAttribute("storyText",publicationMeta.getText());
-		 model.addAttribute("storyTitle",publicationMeta.getTitle());
-		 
+
+		 PublicationMeta pmeta = pubService.findById(id);
+		 if (pmeta != null) {
+			 model.addAttribute("storyText",pmeta.getText());
+			 model.addAttribute("storyTitle",pmeta.getTitle());
+		 }
+		 else {
+			 model.addAttribute("storyText","Sorry engin saga hér.");
+
+		 }
+
     	 return "soguheimur/viewStory";	
 	    }
 	 

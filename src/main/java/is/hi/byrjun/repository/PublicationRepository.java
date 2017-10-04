@@ -14,6 +14,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  */
 public interface PublicationRepository extends JpaRepository<PublicationMeta, Long> {
 	
-	
+	PublicationMeta save (PublicationMeta pbMeta);
     
+	PublicationMeta findById(long id);
 }
