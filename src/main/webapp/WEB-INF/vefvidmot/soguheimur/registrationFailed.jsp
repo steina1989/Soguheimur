@@ -11,11 +11,11 @@
 
 <head>
 	<meta charset="utf-8">
-    <title>Nıskráning virkaği ekki </title>
+    <title>NÃ½skrÃ¡ning virkaÃ°i ekki</title>
 </head>
 <body>
 
-<h1>Villa varğ viğ nıskráningu, reyniğ aftur seinna.</h1>
+<h1>Villa varÃ° viÃ° nÃ½skrÃ¡ningu</h1>
 
 </body>
 
