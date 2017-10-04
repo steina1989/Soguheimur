@@ -2,10 +2,10 @@
 
 <!-- 
  * Authors:
- * ï¿½sgerï¿½ur Inna aia11@hi.is
+ * Ásgerður Inna aia11@hi.is
  * Hrafnhildur Olga hoh44@hi.is
- * ï¿½lafur Konrï¿½ï¿½ oka4@hi.is
- * Steina Dï¿½gg sdv6@hi.is
+ * Ólafur Konráð oka4@hi.is
+ * Steina Dögg sdv6@hi.is
  
  The login page.
  -->
@@ -15,24 +15,23 @@
 
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>Innskrï¿½ning</title>
+    <title>Innskráning</title>
   </head>
   <body>
-    <h1>Innskrï¿½ning</h1>
+    <h1>Innskráning</h1>
     <main>
       <form method="POST" action="/soguheimur/welcome">
         <fieldset>
-          <legend>Innskrï¿½ning</legend>
+          <legend>Innskráning</legend>
           <div>
             <label for="username">Notendanafn:</label>
-            <input type="text" name="username" placeholder="Notendanafn" required="Verï¿½ur aï¿½ setja inn nafn">
+            <input type="text" name="username" placeholder="Notendanafn" required="Verður að setja inn nafn">
           </div>
           <div>
-            <label for="lykilord">Lykilorï¿½:</label>
-            <input type="password" name="lykilord" placeholder="Lykilorï¿½" required="Verï¿½ur aï¿½ setja inn lykilorï¿½">
+            <label for="lykilord">Lykilorð:</label>
+            <input type="password" name="lykilord" placeholder="Lykilorð" required="Verður að setja inn lykilorð">
           </div>
-          <input type="submit" value="Innskrï¿½ning"/>
+          <input type="submit" value="Innskráning"/>
         </fieldset>
       </form>
     </main>

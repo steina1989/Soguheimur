@@ -2,10 +2,10 @@
 
 <!-- 
  * Authors:
- * ï¿½sgerï¿½ur Inna aia11@hi.is
+ * Ásgerğur Inna aia11@hi.is
  * Hrafnhildur Olga hoh44@hi.is
- * ï¿½lafur Konrï¿½ï¿½ oka4@hi.is
- * Steina Dï¿½gg sdv6@hi.is
+ * Ólafur Konráğ oka4@hi.is
+ * Steina Dögg sdv6@hi.is
  
  Dynamic page showing previously submitted title string.
  -->
@@ -16,12 +16,11 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-    <title>Nï¿½ Saga</title>
+    <title>Nı Saga</title>
 </head>
 <body>
 
-<h1>Sagan hefur veriï¿½ send inn!</h1>
+<h1>Sagan hefur veriğ send inn!</h1>
 
 </body>
 
