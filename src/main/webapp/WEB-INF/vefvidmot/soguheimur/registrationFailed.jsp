@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 
-<!-- 
- * Authors:
- * ï¿½sgerï¿½ur Inna aia11@hi.is
- * Hrafnhildur Olga hoh44@hi.is
- * ï¿½lafur Konrï¿½ï¿½ oka4@hi.is
- * Steina Dï¿½gg sdv6@hi.is
- 
+<!--  
  Page displayed when an error accurs in registration.
  -->
 
@@ -17,11 +11,11 @@
 
 <head>
 	<meta charset="utf-8">
-    <title>Nï¿½skrï¿½ning virkaï¿½i ekki </title>
+    <title>Nýskráning virkaði ekki </title>
 </head>
 <body>
 
-<h1>Villa varï¿½ ï¿½ nï¿½skrï¿½ningu. Reyniï¿½ aftur seinna</h1>
+<h1>Villa varð við nýskráningu, reynið aftur seinna.</h1>
 
 </body>
 
