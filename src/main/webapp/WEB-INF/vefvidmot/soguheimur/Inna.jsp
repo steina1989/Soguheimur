@@ -1,0 +1,1 @@
+<p>Halló Friður til Jökulheima og Þórðar</p>
