@@ -14,34 +14,31 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @author Ólafur Konráð oka4@hi.is
  * @author Steina Dögg sdv6@hi.is
  * 
- * Controller for the form
+ *         Controller for the form
  */
-
 
 @Controller
 @RequestMapping("/demo") // Makes all path relative to /demo
 public class DemoController {
 
+	// For learning purposes
+	@RequestMapping("/notandi")
+	public String notandi(Model model) {
+		model.addAttribute("nafn", "Hrafnhildur");
+		return "demo/synaNotandi";
+	}
 
-    // For learning purposes
-    @RequestMapping("/notandi")
-	public String notandi (Model model) {
-    	model.addAttribute("nafn", "Hrafnhildur");
-    	return "demo/synaNotandi";
-    }
-    // For learning purposes
-    @RequestMapping("/spyrjaNotanda")
-    public String spyrjaNotandi () {
-    	return "demo/hvadaNotandi";
-    }
-    
-    // Returns a page with the input name
-    @RequestMapping(value="/hver", method=RequestMethod.POST)
-    public String hver (@RequestParam(value="nafn",required=false)
-    		String nafn, ModelMap model) {
-    	model.addAttribute("nafn", nafn);
-    	return "demo/synaNotandi";
-    }
+	// For learning purposes
+	@RequestMapping("/spyrjaNotanda")
+	public String spyrjaNotandi() {
+		return "demo/hvadaNotandi";
+	}
+
+	// Returns a page with the input name
+	@RequestMapping(value = "/hver", method = RequestMethod.POST)
+	public String hver(@RequestParam(value = "nafn", required = false) String nafn, ModelMap model) {
+		model.addAttribute("nafn", nafn);
+		return "demo/synaNotandi";
+	}
 
 }
-

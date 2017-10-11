@@ -15,7 +15,6 @@ import is.hi.byrjun.model.User;
 import is.hi.byrjun.services.PublicationService;
 import is.hi.byrjun.services.UserService;
 
-
 /**
  * Controller for the project soguheimur
  * 
@@ -26,30 +25,26 @@ import is.hi.byrjun.services.UserService;
 @Controller
 @RequestMapping("/browse") // Makes all path relative to /browse
 public class SoguheimurController {
-	
-	 @Autowired
-	    PublicationService pubService;
-	
+
+	@Autowired
+	PublicationService pubService;
+
 	/*
 	 * Returns the createProfile.jsp file.
 	 */
-	 @RequestMapping(value="/{id}")
-	 public String viewStory(@PathVariable("id") long id, ModelMap model) {
-		 
+	@RequestMapping(value = "/{id}")
+	public String viewStory(@PathVariable("id") long id, ModelMap model) {
 
-		 PublicationMeta pmeta = pubService.findById(id);
-		 if (pmeta != null) {
-			 model.addAttribute("storyText",pmeta.getText());
-			 model.addAttribute("storyTitle",pmeta.getTitle());
-		 }
-		 else {
-			 model.addAttribute("storyText","Sorry engin saga hér.");
+		PublicationMeta pmeta = pubService.findById(id);
+		if (pmeta != null) {
+			model.addAttribute("storyText", pmeta.getText());
+			model.addAttribute("storyTitle", pmeta.getTitle());
+		} else {
+			model.addAttribute("storyText", "Sorry engin saga hér.");
 
-		 }
+		}
 
-    	 return "soguheimur/viewStory";	
-	    }
-	 
-
+		return "soguheimur/viewStory";
+	}
 
 }

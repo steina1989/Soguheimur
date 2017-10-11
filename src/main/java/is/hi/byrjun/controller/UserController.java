@@ -14,7 +14,6 @@ import is.hi.byrjun.model.User;
 import is.hi.byrjun.services.PublicationService;
 import is.hi.byrjun.services.UserService;
 
-
 /**
  * Controller for the project soguheimur
  * 
@@ -25,110 +24,109 @@ import is.hi.byrjun.services.UserService;
 @Controller
 @RequestMapping("/soguheimur") // Makes all path relative to /soguheimur
 public class UserController {
-	
-	 @Autowired
-	 UserService userService;
-	 @Autowired
-	 PublicationService publicationService;	
-	 
-	
+
+	@Autowired
+	UserService userService;
+	@Autowired
+	PublicationService publicationService;
+
 	/*
 	 * Returns the createProfile.jsp file.
 	 */
-	 @RequestMapping("/create")
-	 public String create(){
-	    	return "soguheimur/createProfile";
-	    }
-	 
-	 /**
-	  * 
-	  * @param username
-	  * @param model
-	  * @return a jsp page depending on success of user creation.
-	  */
-	 @RequestMapping(value = "/newUser", method = RequestMethod.POST)
-	    public String newUser(@RequestParam(value = "username", required = false)
-	            String username, ModelMap model) {
+	@RequestMapping("/create")
+	public String create() {
+		return "soguheimur/createProfile";
+	}
 
-	        if (userService.checkValidName(username)) {
-	            User k = new User(username, "1234");
-	            model.addAttribute("notandi", k);
-	            System.out.println("Saved the user");
-	            userService.save(k);
-	            return "soguheimur/newUser";
-	        } else {
-	            model.addAttribute("username", username);
-	            return "soguheimur/registrationFailed";
-	        }
-	    }
-	 
-	 /**
-	  * 
-	  * @return the login page.
-	  */
-	 @RequestMapping("/logIn")
-	 public String logIn(){
-		 User i = new User ("admin", "123");
-		 userService.save(i);
-	    	return "soguheimur/logIn";
-	    }
-	 
-	 /**
-	  * Welcomes and adds a new user that has tried submit their registration details.
-	  * @param username name of user
-	  * @return welcome page or wrongUser page.
-	  */
-	 @RequestMapping(value = "/welcome", method = RequestMethod.POST)
-	    public String welcome(@RequestParam(value = "username", required = false)
-	            String username, ModelMap model) {
-	        if (userService.checkValidName(username)) {
-	            User k = new User(username, "1234");
-	            
-	            model.addAttribute("notandi", k);
-	            return "soguheimur/welcome";
-	        } else {
-	            model.addAttribute("username", username);
-	            return "soguheimur/error";
-	        }
-	    }
-	 
-		/*
-		 * Returns the homePage.jsp file.
-		 */
-		 @RequestMapping("/homePage")
-		 public String homePage(){
-		    	return "soguheimur/homePage";
-		    }
-		 
-		 /*
-		 * Returns the submitStory.jsp file.
-		 */
-		 @RequestMapping("/story")
-			 public String Story(){
-			    	return "soguheimur/submitStory";
-			    }
-			 
-		 /**
-		  * 
-		  * @param titill
-		  * @param model
-		  * @return a jsp page depending on success of user submition of a story.
-		  * INCOMPLETE!!!
-		  */
-		 @RequestMapping(value = "/newStory", method = RequestMethod.POST)
-		 public String newStory(@RequestParam(value = "title")
-		 String title, @RequestParam(value="text") String text) {
-			 
-			 PublicationMeta pub = new PublicationMeta(title,text);
-			 publicationService.save(pub);
-			 return "soguheimur/newStory";
-		 }
-			 
-		 /*
-		  * Returns the error.jsp file.
-		  */
-		 @RequestMapping("/error")
-		 	public String error(){
-			    	return "soguheimur/error";
-		 	}
+	/**
+	 * 
+	 * @param username
+	 * @param model
+	 * @return a jsp page depending on success of user creation.
+	 */
+	@RequestMapping(value = "/newUser", method = RequestMethod.POST)
+	public String newUser(@RequestParam(value = "username", required = false) String username, ModelMap model) {
+
+		if (userService.checkValidName(username)) {
+			User k = new User(username, "1234");
+			model.addAttribute("notandi", k);
+			System.out.println("Saved the user");
+			userService.save(k);
+			return "soguheimur/newUser";
+		} else {
+			model.addAttribute("username", username);
+			return "soguheimur/registrationFailed";
+		}
+	}
+
+	/**
+	 * 
+	 * @return the login page.
+	 */
+	@RequestMapping("/logIn")
+	public String logIn() {
+		User i = new User("admin", "123");
+		userService.save(i);
+		return "soguheimur/logIn";
+	}
+
+	/**
+	 * Welcomes and adds a new user that has tried submit their registration
+	 * details.
+	 * 
+	 * @param username
+	 *            name of user
+	 * @return welcome page or wrongUser page.
+	 */
+	@RequestMapping(value = "/welcome", method = RequestMethod.POST)
+	public String welcome(@RequestParam(value = "username", required = false) String username, ModelMap model) {
+		if (userService.checkValidName(username)) {
+			User k = new User(username, "1234");
+
+			model.addAttribute("notandi", k);
+			return "soguheimur/welcome";
+		} else {
+			model.addAttribute("username", username);
+			return "soguheimur/error";
+		}
+	}
+
+	/*
+	 * Returns the homePage.jsp file.
+	 */
+	@RequestMapping("/homePage")
+	public String homePage() {
+		return "soguheimur/homePage";
+	}
+
+	/*
+	 * Returns the submitStory.jsp file.
+	 */
+	@RequestMapping("/story")
+	public String Story() {
+		return "soguheimur/submitStory";
+	}
+
+	/**
+	 * 
+	 * @param titill
+	 * @param model
+	 * @return a jsp page depending on success of user submition of a story.
+	 *         INCOMPLETE.
+	 */
+	@RequestMapping(value = "/newStory", method = RequestMethod.POST)
+	public String newStory(@RequestParam(value = "title") String title, @RequestParam(value = "text") String text) {
+
+		PublicationMeta pub = new PublicationMeta(title, text);
+		publicationService.save(pub);
+		return "soguheimur/newStory";
+	}
+
+	/*
+	 * Returns the error.jsp file.
+	 */
+	@RequestMapping("/error")
+	public String error() {
+		return "soguheimur/error";
+	}
 }
