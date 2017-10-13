@@ -18,13 +18,12 @@ import is.hi.byrjun.services.UserService;
 /**
  * Controller for the project soguheimur
  * 
- * @author Hrafnhildur Olga hoh44@hi.is
  * @author Steina Dögg sdv6@hi.is
  * 
  */
 @Controller
 @RequestMapping("/compose")
-public class StoryCreationController {
+public class ComposeController {
 
 	@Autowired
 	PublicationService pubService;
