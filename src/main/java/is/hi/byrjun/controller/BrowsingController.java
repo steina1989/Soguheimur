@@ -24,7 +24,7 @@ import is.hi.byrjun.services.UserService;
  */
 @Controller
 @RequestMapping("/browse") // Makes all path relative to /browse
-public class SoguheimurController {
+public class BrowsingController {
 
 	@Autowired
 	PublicationService pubService;
