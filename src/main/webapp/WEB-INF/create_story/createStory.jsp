@@ -24,7 +24,7 @@
 
 <h2>Hér getur þú sent inn söguna þína</h2>
 
-	<form method="POST" action="/soguheimur/newStory">
+	<form method="POST" action="submit">
         <div class="form-group">
           <label class="" for="title">Titill:</label>
           <input class="form-control" type="text" name="title" id="title" placeholder="Titill" required>

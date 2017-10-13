@@ -20,7 +20,7 @@
   <body>
     <h1>Innskráning</h1>
     <main>
-      <form method="POST" action="/soguheimur/welcome">
+      <form method="POST" action="home">
         <fieldset>
           <legend>Innskráning</legend>
           <div>

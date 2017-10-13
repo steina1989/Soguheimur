@@ -26,7 +26,7 @@
  -->
 <div>
 	<p>Má bjóða þér að senda inn nýja sögu?</p>
-	<a href="/soguheimur/story">Senda inn sögu</a>
+	<a href="/compose/story">Senda inn sögu</a>
 </div>
 <div>
 	<p>Má bjóða þér að skoða sögurnar þínar?</p>

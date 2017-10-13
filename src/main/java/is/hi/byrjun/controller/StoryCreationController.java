@@ -23,28 +23,35 @@ import is.hi.byrjun.services.UserService;
  * 
  */
 @Controller
-@RequestMapping("/browse") // Makes all path relative to /browse
-public class BrowsingController {
+@RequestMapping("/compose")
+public class StoryCreationController {
 
 	@Autowired
 	PublicationService pubService;
 
 	/*
-	 * Returns a story by id.
+	 * Returns the submitStory.jsp file.
 	 */
-	@RequestMapping(value = "/{id}")
-	public String viewStory(@PathVariable("id") long id, ModelMap model) {
-
-		PublicationMeta pmeta = pubService.findById(id);
-		if (pmeta != null) {
-			model.addAttribute("storyText", pmeta.getText());
-			model.addAttribute("storyTitle", pmeta.getTitle());
-		} else {
-			model.addAttribute("storyText", "Sorry engin saga hér.");
-
-		}
-
-		return "browse/viewStory";
+	@RequestMapping("/newStory")
+	public String Story() {
+		return "create_story/createStory";
 	}
+
+	/**
+	 * 
+	 * When user wants to submit a story, it gets pushed to the database.
+	 * 
+	 * @param titill
+	 * @param model
+	 * @return a jsp page depending on success of user submition of a story.
+	 * 
+	 */
+	@RequestMapping(value = "/submit", method = RequestMethod.POST)
+	public String newStory(@RequestParam(value = "title") String title, @RequestParam(value = "text") String text) {
+
+		PublicationMeta pub = new PublicationMeta(title, text);
+		pubService.save(pub);
+		return "create_story/submSuccess";
+	} // Should probably do something else if saving fails
 
 }

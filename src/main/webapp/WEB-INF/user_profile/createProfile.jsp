@@ -20,7 +20,7 @@
   <body>
     <h1>Búa til aðgang</h1>
     <main>
-      <form method="POST" action="/soguheimur/newUser">
+      <form method="POST" action="createUser">
         <fieldset>
           <legend>Nýr Notandi</legend>
           <div class="field">

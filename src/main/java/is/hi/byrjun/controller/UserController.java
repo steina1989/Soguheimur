@@ -22,8 +22,10 @@ import is.hi.byrjun.services.UserService;
  * 
  */
 @Controller
-@RequestMapping("/soguheimur") // Makes all path relative to /soguheimur
+@RequestMapping("/usr") // Makes all path relative to /usr
 public class UserController {
+
+	private String parent = "user_profile/"; // The folder that gets prepended to returned strings.
 
 	@Autowired
 	UserService userService;
@@ -35,7 +37,7 @@ public class UserController {
 	 */
 	@RequestMapping("/create")
 	public String create() {
-		return "soguheimur/createProfile";
+		return parent + "createProfile";
 	}
 
 	/**
@@ -44,7 +46,7 @@ public class UserController {
 	 * @param model
 	 * @return a jsp page depending on success of user creation.
 	 */
-	@RequestMapping(value = "/newUser", method = RequestMethod.POST)
+	@RequestMapping(value = "/createUser", method = RequestMethod.POST)
 	public String newUser(@RequestParam(value = "username", required = false) String username, ModelMap model) {
 
 		if (userService.checkValidName(username)) {
@@ -52,10 +54,10 @@ public class UserController {
 			model.addAttribute("notandi", k);
 			System.out.println("Saved the user");
 			userService.save(k);
-			return "soguheimur/newUser";
+			return parent + "newUser";
 		} else {
 			model.addAttribute("username", username);
-			return "soguheimur/registrationFailed";
+			return parent + "registrationFailed";
 		}
 	}
 
@@ -67,7 +69,7 @@ public class UserController {
 	public String logIn() {
 		User i = new User("admin", "123");
 		userService.save(i);
-		return "soguheimur/logIn";
+		return parent + "logIn";
 	}
 
 	/**
@@ -78,16 +80,16 @@ public class UserController {
 	 *            name of user
 	 * @return welcome page or wrongUser page.
 	 */
-	@RequestMapping(value = "/welcome", method = RequestMethod.POST)
+	@RequestMapping(value = "/home", method = RequestMethod.POST)
 	public String welcome(@RequestParam(value = "username", required = false) String username, ModelMap model) {
 		if (userService.checkValidName(username)) {
 			User k = new User(username, "1234");
 
 			model.addAttribute("notandi", k);
-			return "soguheimur/welcome";
+			return parent + "welcome";
 		} else {
 			model.addAttribute("username", username);
-			return "soguheimur/error";
+			return parent + "/error"; // To do, there is no such page.
 		}
 	}
 
@@ -96,37 +98,7 @@ public class UserController {
 	 */
 	@RequestMapping("/homePage")
 	public String homePage() {
-		return "soguheimur/homePage";
+		return parent + "homePage";
 	}
 
-	/*
-	 * Returns the submitStory.jsp file.
-	 */
-	@RequestMapping("/story")
-	public String Story() {
-		return "soguheimur/submitStory";
-	}
-
-	/**
-	 * 
-	 * @param titill
-	 * @param model
-	 * @return a jsp page depending on success of user submition of a story.
-	 *         INCOMPLETE.
-	 */
-	@RequestMapping(value = "/newStory", method = RequestMethod.POST)
-	public String newStory(@RequestParam(value = "title") String title, @RequestParam(value = "text") String text) {
-
-		PublicationMeta pub = new PublicationMeta(title, text);
-		publicationService.save(pub);
-		return "soguheimur/newStory";
-	}
-
-	/*
-	 * Returns the error.jsp file.
-	 */
-	@RequestMapping("/error")
-	public String error() {
-		return "soguheimur/error";
-	}
 }
