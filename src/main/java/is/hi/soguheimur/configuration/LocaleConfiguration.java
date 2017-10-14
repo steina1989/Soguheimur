@@ -15,8 +15,8 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 public class LocaleConfiguration {
 	
 	/**
-	 * 
-	 * @return
+	 * Configure an instance of a LocaleResolvor and set it to ROOT locale
+	 * (it will otherwise default to EN)
 	 */
 	   @Bean
 	   public LocaleResolver localeResolver() {
