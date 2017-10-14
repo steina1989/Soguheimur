@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>HBV501G</groupId>
-    <artifactId>ByrjunSpring-enginnGG</artifactId>
+    <groupId>Group_9</groupId>
+    <artifactId>Soguheimur</artifactId>
     <version>0.1</version>
 
     <parent>
@@ -76,5 +76,5 @@
             </plugin>
         </plugins>
     </build>
-    <name>ByrjunSpring-enginnGG</name>
+    <name>Soguheimur</name>
 </project>
