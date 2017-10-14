@@ -1,10 +1,7 @@
 package is.hi.soguheimur.repository;
-import java.util.List;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import is.hi.soguheimur.model.PublicationMeta;
-import is.hi.soguheimur.model.User;
 
 /**
  * Interface for the UserRepository
