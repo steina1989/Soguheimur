@@ -1,4 +1,4 @@
-package is.hi.byrjun.model;
+package is.hi.soguheimur.model;
 
 import java.util.ArrayList;
 import java.util.Date;

@@ -1,15 +1,15 @@
 
-package is.hi.byrjun.services;
+package is.hi.soguheimur.services;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import is.hi.byrjun.model.PublicationMeta;
-import is.hi.byrjun.model.User;
-import is.hi.byrjun.repository.PublicationRepository;
-import is.hi.byrjun.repository.UserRepository;
+import is.hi.soguheimur.model.PublicationMeta;
+import is.hi.soguheimur.model.User;
+import is.hi.soguheimur.repository.PublicationRepository;
+import is.hi.soguheimur.repository.UserRepository;
 
 /**
  * User services and connection to the user repository.

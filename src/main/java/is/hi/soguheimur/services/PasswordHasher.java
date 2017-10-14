@@ -1,4 +1,4 @@
-package is.hi.byrjun.services;
+package is.hi.soguheimur.services;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 

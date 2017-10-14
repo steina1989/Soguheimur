@@ -1,4 +1,4 @@
-package is.hi.byrjun.controller;
+package is.hi.soguheimur.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import is.hi.byrjun.model.PublicationMeta;
-import is.hi.byrjun.model.User;
-import is.hi.byrjun.services.PublicationService;
-import is.hi.byrjun.services.UserService;
+import is.hi.soguheimur.model.PublicationMeta;
+import is.hi.soguheimur.model.User;
+import is.hi.soguheimur.services.PublicationService;
+import is.hi.soguheimur.services.UserService;
 
 /**
  * Controller for the project soguheimur

@@ -7,7 +7,7 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>java:is.hi.byrjun.Application</config>
+		<config>java:is.hi.soguheimur.Application</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

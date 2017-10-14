@@ -1,4 +1,4 @@
-package is.hi.byrjun.Configuration;
+package is.hi.soguheimur.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
