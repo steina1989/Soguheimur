@@ -1,6 +1,7 @@
 package is.hi.byrjun.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -25,9 +26,23 @@ import is.hi.byrjun.services.UserService;
 @Controller
 @RequestMapping("/browse") // Makes all path relative to /browse
 public class BrowsingController {
+	
+    @Autowired
+    private MessageSource messageSource;
 
 	@Autowired
 	PublicationService pubService;
+	
+	/**
+	 * 
+	 * @param model
+	 * @return
+	 */
+	@RequestMapping(value = "/thdemo")
+	public String viewDemo(ModelMap model) {
+		model.addAttribute("message", "Hello world");
+		return "demo/thdemo";
+	}
 
 	/*
 	 * Returns a story by id.

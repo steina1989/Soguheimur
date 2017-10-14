@@ -16,7 +16,7 @@ import is.hi.byrjun.services.PublicationService;
 import is.hi.byrjun.services.UserService;
 
 /**
- * Controller for the project soguheimur
+ * Controller for the 
  * 
  * @author Steina Dögg sdv6@hi.is
  * 
@@ -25,6 +25,7 @@ import is.hi.byrjun.services.UserService;
 @RequestMapping("/compose")
 public class ComposeController {
 
+	private String parent = "compose/"; // The folder that gets prepended to returned strings.
 	@Autowired
 	PublicationService pubService;
 
@@ -33,7 +34,7 @@ public class ComposeController {
 	 */
 	@RequestMapping("/newStory")
 	public String Story() {
-		return "create_story/createStory";
+		return parent + "createStory";
 	}
 
 	/**
@@ -50,7 +51,7 @@ public class ComposeController {
 
 		PublicationMeta pub = new PublicationMeta(title, text);
 		pubService.save(pub);
-		return "create_story/submSuccess";
+		return parent + "submSuccess";
 	} // Should probably do something else if saving fails
 
 }
