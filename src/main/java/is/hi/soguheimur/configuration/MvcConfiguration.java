@@ -1,13 +1,12 @@
 package is.hi.soguheimur.configuration;
 
 import java.util.Locale;
-
+import org.springframework.core.SpringVersion;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import org.thymeleaf.spring4.SpringTemplateEngine;
 import org.thymeleaf.spring4.view.ThymeleafViewResolver;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
@@ -35,8 +34,11 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
 		templateResolver.setSuffix(".html"); 
 		templateResolver.setTemplateMode("HTML5");
 		templateResolver.setCharacterEncoding("UTF-8");
-		
+
 		return templateResolver;
+		
+
+		
 	}
 
    @Bean

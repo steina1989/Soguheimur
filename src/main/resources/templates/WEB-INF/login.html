@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- Authors: 
+	Steina Dögg sdv6@hi.is 
+	Single template for login and login-error
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title th:text="#{login.title}">Login page</title>
+  </head>
+  <body>
+    <h1 th:text="#{login.title}">Login page</h1>
+    
+    <p th:if="${loginError}" class="error" th:text="#{login.incorrect}">Wrong user or password</p>
+    <form th:action="@{/login}" method="post">
+      <label for="username" th:text="#{login.userName}">Username</label>:
+      <input type="text" id="username" name="username" autofocus="autofocus"/> <br />     
+      <label for="password" th:text="#{login.password}">Password</label>:
+      <input type="password" id="password" name="password" /> <br />
+      <button type="submit" name="Log in" th:text="#{login.loginButton}">Log In</button>
+    </form>
+
+    
+  </body>
+</html>
+

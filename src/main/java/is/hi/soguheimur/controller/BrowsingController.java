@@ -19,6 +19,7 @@ import is.hi.soguheimur.services.PublicationService;
  * @author Steina Dögg sdv6@hi.is
  * 
  */
+
 @Controller
 @RequestMapping("/browse") // Makes all path relative to /browse
 public class BrowsingController {
@@ -39,6 +40,8 @@ public class BrowsingController {
 		model.addAttribute("message", "Hello world");
 		return "demo/thdemo";
 	}
+	
+
 
 	/*
 	 * Returns a story by id.

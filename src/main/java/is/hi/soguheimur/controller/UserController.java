@@ -18,6 +18,7 @@ import is.hi.soguheimur.services.UserService;
  * @author Steina Dögg sdv6@hi.is
  * 
  */
+
 @Controller
 @RequestMapping("/usr") // Makes all path relative to /usr
 public class UserController {

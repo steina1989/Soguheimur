@@ -1,5 +1,6 @@
 package is.hi.soguheimur.configuration;
 
+
 import java.util.Locale;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,6 +12,7 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
  * 
  * Configuration for the Locale functionality.
  */
+
 @Configuration
 public class LocaleConfiguration {
 	
