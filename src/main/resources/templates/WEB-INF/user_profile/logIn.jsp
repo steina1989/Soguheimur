@@ -15,6 +15,7 @@
 
 <html lang="en">
   <head>
+  	<link rel="stylesheet" type="text/css" media="all" href="../../../css/soguheimur.css" th:href="@{/css/soguheimur.css}" />
     <title>Innskráning</title>
   </head>
   <body>

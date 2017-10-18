@@ -6,10 +6,7 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 
 /**
- * @author Ásgerður Inna aia11@hi.is
- * @author Hrafnhildur Olga hoh44@hi.is
- * @author Ólafur Konráð oka4@hi.is
- * @author Steina Dögg sdv6@hi.is
+
  * 
  *
  * The main class of the project.

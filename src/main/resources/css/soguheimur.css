@@ -1,0 +1,175 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body{
+    background: #DFCBBD;
+    font-family: 'Gentium Book Basic', serif;
+}
+
+/*img{
+  width: 100%;
+  height: auto;
+}*/
+
+header {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  min-height: 500px;
+  padding: 4em 2em 2em 200px;
+  padding-left: 15%;
+  padding-right: 15%;
+  margin-bottom: auto;
+  font-family: 'Gentium Book Basic', serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #46120C;
+  text-align: right;
+}
+
+h1{
+  margin: 5px;
+  padding: 5px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+h2{
+  margin: 5px;
+  padding: 5px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+h3{
+  margin: 5px;
+  padding: 5px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+h4{
+  margin: 5px;
+  padding: 5px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+blockquote{
+  font-size: 15px;
+  font-style: italic;
+  line-height: 150%;
+  margin: 0 0 20px 0;
+  padding: 0 0 0 40px;
+  width: calc(50%);
+  float: right;
+}
+
+main{
+  background-color: #DFCBBD;
+  color: #46120C;
+}
+
+p {
+   margin: 10px;
+   padding: 10px;
+   padding-left: 15%;
+   padding-right: 15%;
+   font-size: 20px;
+}
+
+form {
+   margin: 10px;
+   padding: 10px;
+   padding-left: 15%;
+   padding-right: 15%;
+   font-size: 20px;
+}
+
+fieldset{
+  margin: 10px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+input{
+  width: 200px;
+  height: 25px;
+  border: 3px solid #46120C;
+  padding: 5px;
+  font-family: 'Gentium Book Basic', serif;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-color: #EBDBD8;
+}
+
+em{
+  font-size: 10p
+}
+
+select {
+  margin: 10px;
+  padding: 10px 10px;
+  font-size: 15px;
+  background-color: #EBDBD8;
+  border: 2px solid #46120C;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  color: #46120C;
+}
+
+textarea {
+	width: 1000px;
+	height: 1200px;
+	border: 3px solid #46120C;
+	padding: 5px;
+	font-family: 'Gentium Book Basic', serif;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+  background-color: #EBDBD8;
+}
+
+button{
+  margin: 10px;
+  padding: 10px;
+  padding-left: 15%;
+  padding-right: 15%;
+  font-size: 20px;
+  background-color: #EBDBD8;
+  border: 2px solid #46120C;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  color: #46120C;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #92857C;
+}
+
+li {
+    float: left;
+    padding-left: 15%;
+    /*padding-right: 15%;*/
+}
+
+li a {
+    display: block;
+    color: #46120C;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Gentium Book Basic', serif;
+    font-size: 20px;
+}
+
+li a:hover {
+    background-color: #926B50;
+}
