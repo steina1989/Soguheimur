@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<!-- 
+ * Authors:
+ * Ásgerður Inna aia11@hi.is
+ * Hrafnhildur Olga hoh44@hi.is
+ * Ólafur Konráð oka4@hi.is
+ * Steina Dögg sdv6@hi.is
+ 
+ Page displayed when something goes wrong.
+ -->
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+
+<head>
+    <title>
+    <span th:text="#{error.title}">Eitthvað fór úrskeiðis</span><br/>
+    </title>
+</head>
+<body>
+
+<h1>
+<span th:text="#{error.message}">Eitthvað fór úrskeiðis! Vinsamlegast reynið aftur</span><br/>
+</h1>
+
+</body>
+
+</html>

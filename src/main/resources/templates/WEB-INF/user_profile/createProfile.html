@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<!-- 
+ * Authors:
+ * Ásgerður Inna aia11@hi.is
+ * Hrafnhildur Olga hoh44@hi.is
+ * Ólafur Konráð oka4@hi.is
+ * Steina Dögg sdv6@hi.is
+ 
+ This page is used to create a new profile.
+ -->
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <head>
+    <title>Skapa aðgang
+ 	<p><span th:text="#{CreateProfile.Title}">Skapa aðgang</span><br/></p>   
+    </title>
+  </head>
+  <body>
+    <h1>Búa til aðgang
+    <p><span th:text="#{CreateProfile.CreateAccount}">Skapa aðgang</span><br/></p> 
+    </h1>
+    <main>
+      <form method="POST" action="createUser">
+        <fieldset>
+          <legend>Nýr Notandi
+          <p><span th:text="#{CreateProfile.NewUser}">Nýr Notandi</span><br/></p> 
+          </legend>
+          <div class="field">
+            <label for="name">Nafn:</label>
+            <input type="text" name="name" id="name" placeholder="Fullt Nafn" required="Verður að setja inn nafn">
+          </div>
+          <div class="field">
+            <label for="username">Notendanafn:</label>
+            <input type="text" name="username" id="username" placeholder="Notendanafn" required="Verður að setja inn nafn">
+          </div>
+          <div class="field">
+            <label for="email">Netfang:
+            <input type="email" name="email" id="email" placeholder="Netfang" required> <em>Netfang verður að innihalda "@" merki</em>
+            </label>
+          </div>
+          <div class="field">
+            <label for="lykilord">Lykilorð:</label>
+            <input type="password" name="lykilord" id="lykilord" placeholder="Lykilorð" required>
+          </div>
+          <div class="field">
+            <label for="lykilordb">Lykilorð, aftur:
+            <input type="password" name="lykilordb" id="lykilordb" placeholder="Lykilorð aftur" required> <em>Lykilorðin verða að vera þau sömu</em>
+            </label>
+          </div>
+          <div class="field">
+            <label for="bday">Fæðingardagur:</label>
+            <input type="date" name="bday" required="Verður að setja inn aldur">
+          </div>
+          <div class="field">
+            <label for="school">Skóli:</label>
+            <input type="text" name="school" id="school" placeholder="Skólinn þinn">
+          </div>
+           <div class="field">
+            <label for="radio">Veldu mynd:</label>
+          </div>
+            <div class="field">
+              <label>
+                <input type="radio" value="0" name="number"> 1
+              </label>
+              <label>
+                <input type="radio" value="10" name="number" checked>2
+              </label>
+              <label>
+                <input type="radio" value="20" name="number"> 3
+              </label>
+              <label>
+                <input type="radio" value="30" name="number"> 4
+              </label>
+            </div>
+          
+          <input type="submit" value="Nýskráning"/>
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>

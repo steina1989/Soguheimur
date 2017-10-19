@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<!-- 
+ * Authors:
+ * Ásgerður Inna aia11@hi.is
+ * Hrafnhildur Olga hoh44@hi.is
+ * Ólafur Konráð oka4@hi.is
+ * Steina Dögg sdv6@hi.is
+ 
+ Dynamic page showing previously submitted title string.
+ -->
+
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <title>Hver er notandinn?   </title>
+    <p><span th:text="#{createStory.WhoIsTheUser}">Hver er notandinn?</span><br/></p>
+</head>
+<body>
+
+<h1></h1>
+
+<form method="POST" action="/demo/hver">
+	Hvað heitirðu? <input name="nafn" type="text"
+									placeholder= "Nafn"></input>
+	<input type="submit" value="í lagi" />
+</form>
+</body>
+
+</html>
