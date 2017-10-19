@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+	<!-- 
+ 		* Authors:
+		* Ásgerður Inna aia11@hi.is
+		* Hrafnhildur Olga hoh44@hi.is
+ 		* Ólafur Konráð oka4@hi.is
+		* Steina Dögg sdv6@hi.is
+		Error page.
+ 
+ 	-->
+	
     <head>
-        <title>Login page</title>
+        <title>404 Síða fannst ekki</title>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="css/main.css" th:href="@{/css/main.css}" />
+        <link rel="stylesheet" type="text/css" media="all" 
+        href="../../css/soguheimur.css" th:href="@{../../css/soguheimur.css}" />
+        
+
 	</head>
     <body>
-	
-		<span>sry mate</span>
+    <h1 th: text="#{error.title}">404 Síða fannst ekki</h1>
+		<h3 th: text="${error.code}">404</h3>
+		<p th: text="${error.message}">Villa</p>
     </body>
 </html>

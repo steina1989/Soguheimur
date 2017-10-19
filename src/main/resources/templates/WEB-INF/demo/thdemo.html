@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-<title>Home page</title>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
-<body>
-	<p>
-		<span th:text="'Today is: ' + ${#dates.format(#dates.createNow(), 'dd MMM yyyy HH:mm')}"></span>
-	</p>
-	<p>
-	<!-- Try opening this file locally in a web browser and compare it with accessing it on localhost:8080/browse/thdemo. -->
-		<span th:text="#{message}">The text you are reading will not appear on a running server</span><br/>
-        <span th:text="#{homepage.welcome}">But it's nice while prototyping</span><br/>
-        <span th:text="#{homepage.viewStories}">Because we can develope without a running environment</span>
+	<head>
+		<title>Home page</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
+	<body>
+		<p>
+			<span th:text="'Today is: ' + ${#dates.format(#dates.createNow(), 'dd MMM yyyy HH:mm')}"></span>
+		</p>
+		<p>
+		<!-- Try opening this file locally in a web browser and compare it with accessing it on localhost:8080/browse/thdemo. -->
+			<span th:text="#{message}">The text you are reading will not appear on a running server</span><br/>
+        	<span th:text="#{homepage.welcome}">But it's nice while prototyping</span><br/>
+        	<span th:text="#{homepage.viewStories}">Because we can develope without a running environment</span>
         
-	</p>
+		</p>
 
-</body>
+	</body>
 </html>
