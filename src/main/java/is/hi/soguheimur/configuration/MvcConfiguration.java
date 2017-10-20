@@ -43,7 +43,6 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
 	}
 	@Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		super();
         registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
 	}
 
