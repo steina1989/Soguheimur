@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!-- 
+ * Authors:
+ * Ásgerður Inna aia11@hi.is
+ * Hrafnhildur Olga hoh44@hi.is
+ * Ólafur Konráð oka4@hi.is
+ * Steina Dögg sdv6@hi.is
+ 
+ Displayed after following the link from the user's home page to submit a story.
+ -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+<head>
+
+    <title>
+   
+    Senda inn Sögu
+  
+    </title>
+</head>
+<body>
+
+<h1>
+Söguheimur
+</h1>
+
+<h2> 
+<span th:text="#{createStory.Heading}">Hér getur þú sent inn söguna þína</span><br/>
+</h2>
+	<form method="POST" action="submit">
+        <div class="form-group">
+          <label class="" th:text="#{createStory.TextTitle}">Titill:</label>
+          <input class="form-control" type="text" name="title" id="title" placeholder="Titill" required>
+        </div>
+        <div class="form-group">
+          <div>
+            <label class="" th:text="#{createStory.Text}">Texti:</label>
+          </div>
+          <textarea id="new-entry" name="text" class="form-control" rows="10" cols="40" placeholder="Sagan þín..."></textarea>
+        </div>
+        <input type="submit" value="Senda Inn"/>
+      </form>
+
+
+</body>
+
+</html>
