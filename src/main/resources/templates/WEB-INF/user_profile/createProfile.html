@@ -29,37 +29,43 @@
           <p><span th:text="#{CreateProfile.NewUser}">Nýr Notandi</span><br/></p> 
           </legend>
           <div class="field">
-            <label for="name">Nafn:</label>
+            <p><span th:text="#{CreateProfile.Name}">Nafn</span><br/></p>
             <input type="text" name="name" id="name" placeholder="Fullt Nafn" required="Verður að setja inn nafn">
           </div>
           <div class="field">
-            <label for="username">Notendanafn:</label>
+            <p><span th:text="#{CreateProfile.UserName}">Notendanafn:</span><br/></p>
             <input type="text" name="username" id="username" placeholder="Notendanafn" required="Verður að setja inn nafn">
           </div>
           <div class="field">
-            <label for="email">Netfang:
+              <p><span th:text="#{CreateProfile.Email}">Netfang</span><br/></p>
             <input type="email" name="email" id="email" placeholder="Netfang" required> <em>Netfang verður að innihalda "@" merki</em>
             </label>
           </div>
           <div class="field">
             <label for="lykilord">Lykilorð:</label>
+             <p><span th:text="#{CreateProfile.Password}">Lykilorð:</span><br/></p>
             <input type="password" name="lykilord" id="lykilord" placeholder="Lykilorð" required>
           </div>
           <div class="field">
             <label for="lykilordb">Lykilorð, aftur:
+              <p><span th:text="#{CreateProfile.PasswordAgain}">Lykilorð, aftur:</span><br/></p>
             <input type="password" name="lykilordb" id="lykilordb" placeholder="Lykilorð aftur" required> <em>Lykilorðin verða að vera þau sömu</em>
             </label>
           </div>
           <div class="field">
             <label for="bday">Fæðingardagur:</label>
+            <p><span th:text="#{CreateProfile.DateOfBirth}">Fæðingardagur:</span><br/></p>
             <input type="date" name="bday" required="Verður að setja inn aldur">
           </div>
           <div class="field">
             <label for="school">Skóli:</label>
+             <p><span th:text="#{CreateProfile.School}">Skóli:</span><br/></p>
             <input type="text" name="school" id="school" placeholder="Skólinn þinn">
           </div>
            <div class="field">
+           
             <label for="radio">Veldu mynd:</label>
+             <p><span th:text="#{CreateProfile.Picture}">Veldu mynd:</span><br/></p>
           </div>
             <div class="field">
               <label>
