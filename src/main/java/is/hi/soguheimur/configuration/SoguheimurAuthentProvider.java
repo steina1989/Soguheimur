@@ -25,8 +25,7 @@ public class SoguheimurAuthentProvider implements AuthenticationProvider {
 	 * 
 	 * @return null if user/password combo do not match, otherwise a new
 	 *         authenticationToken which SpringSecurity will proceed to use during a
-	 *         session. I believe this function is called every time a user enters a
-	 *         page in which he needs authentication to load.
+	 *         session.
 	 */
 	@Override
 	public Authentication authenticate(Authentication authentication) throws AuthenticationException {
@@ -45,10 +44,6 @@ public class SoguheimurAuthentProvider implements AuthenticationProvider {
 		 * get user from repository by username if user.passhash != hash(password)
 		 * return null else return a new usernamepwauthentiationtoken
 		 */
-		// return null;
-		// author
-		// Collection<? extends GrantedAuthority> authorities
-		//
 		UsernamePasswordAuthenticationToken a = new UsernamePasswordAuthenticationToken(
                 name, password, collection);
 
