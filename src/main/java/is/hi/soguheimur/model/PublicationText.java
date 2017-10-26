@@ -1,6 +1,7 @@
 package is.hi.soguheimur.model;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
@@ -17,6 +18,7 @@ import javax.persistence.Table;
 @Table(name="publicationText")
 public class PublicationText {
 	
+	@Id
 	private long id;
 	private String text;
 	
