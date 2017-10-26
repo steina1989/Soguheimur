@@ -40,6 +40,11 @@ public class LoginController {
 	    model.addAttribute("loginError", true);
 		return "login";
 	}
-
+	  @RequestMapping("/dev")
+	  public String dev(Authentication authentication)
+	  {
+		  System.out.println(authentication.toString());
+		  return "login";
+	  }
 
 }
