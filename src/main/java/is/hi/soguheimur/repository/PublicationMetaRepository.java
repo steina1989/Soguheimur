@@ -10,7 +10,7 @@ import is.hi.soguheimur.model.PublicationMeta;
  * @author Steina Dögg sdv6@hi.is
  * 
  */
-public interface PublicationRepository extends JpaRepository<PublicationMeta, Long> {
+public interface PublicationMetaRepository extends JpaRepository<PublicationMeta, Long> {
 	
 	PublicationMeta save (PublicationMeta pbMeta);
     
