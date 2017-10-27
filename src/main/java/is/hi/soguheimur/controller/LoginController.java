@@ -1,6 +1,5 @@
 package is.hi.soguheimur.controller;
 
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -20,31 +19,31 @@ import is.hi.soguheimur.services.PublicationService;
  */
 
 @Controller
-@RequestMapping("/") // 
+@RequestMapping("/") //
 public class LoginController {
 	
-	/**
-	 * 
-	 * @param model
-	 * @return
-	 */
-	  // Login form
-	  @RequestMapping("/login")
-	  public String login() {
-	    return "login";
-	  }
+	@RequestMapping("")
+	public String blablablablablablal() {
+		return "redirect:compose/newStory";
+	}
 
-	  // Login form with error
-	  @RequestMapping("/login-error")
-	  public String loginError(Model model) {
-	    model.addAttribute("loginError", true);
+	@RequestMapping("/login")
+	public String login() {
 		return "login";
 	}
-	  @RequestMapping("/dev")
-	  public String dev(Authentication authentication)
-	  {
-		  System.out.println(authentication.toString());
-		  return "login";
-	  }
+
+	// Login form with error
+	@RequestMapping("/login-error")
+	public String loginError(Model model) {
+		model.addAttribute("loginError", true);
+		return "login";
+	}
+
+	@RequestMapping("/dev")
+	public String dev(Authentication authentication) {
+		if (authentication != null) System.out.println(authentication.toString());
+		else System.out.println("------Auth null-------");
+		return "login";
+	}
 
 }

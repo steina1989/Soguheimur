@@ -40,7 +40,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
 	    http
 	    	.authorizeRequests()
 	    	.antMatchers("/css/**","/browse/**").permitAll()
-	    	.antMatchers("/usr/**").hasRole("USER")
+	    	.antMatchers("/usr/**","/compose/**").hasRole("USER")
 	    	.and()
 	        .formLogin()
 	        .loginPage("/login")
@@ -48,6 +48,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
 	        .and()
 	        .logout()
 	        .logoutSuccessUrl("/index");
+	    
 	}
 	
 	/**

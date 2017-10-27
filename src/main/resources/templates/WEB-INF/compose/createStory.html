@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <!-- 
  * Authors:
  * Ásgerður Inna aia11@hi.is
@@ -23,6 +23,10 @@
 </head>
 <body>
 
+
+		<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+
+
 <h1>
 Söguheimur
 </h1>
@@ -30,10 +34,10 @@ Söguheimur
 <h2> 
 <span th:text="#{createStory.Heading}">Hér getur þú sent inn söguna þína</span><br/>
 </h2>
-	<form method="POST" action="submit">
+	<form method="POST" th:action="submit">
         <div class="form-group">
-          <label class="" th:text="#{createStory.TextTitle}">Titill:</label>
-          <input class="form-control" type="text" name="title" id="title" placeholder="Titill" required>
+          <label class="" th:text="#{createStory.Title}">Titill:</label>
+          <input class="form-control" type="text" name="title" id="title" placeholder="Titill"/>
         </div>
         <div class="form-group">
           <div>
@@ -43,8 +47,6 @@ Söguheimur
         </div>
         <input type="submit" value="Senda Inn"/>
       </form>
-
-
 </body>
 
 </html>
