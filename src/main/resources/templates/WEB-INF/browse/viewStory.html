@@ -1,22 +1,21 @@
-<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+	xmlns:th="http://www.thymeleaf.org">
 
-  <head>
-  	<link rel="stylesheet" type="text/css" media="all" 
-  	href="../../../css/soguheimur.css" th:href="@{../../../css/soguheimur.css}" />
-  
-	<title th:text="#{browse.title}">Browse</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" type="text/css" media="all" 
-          href="../../css/gtvg.css" th:href="@{/css/gtvg.css}" />
-  </head>
+<head>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../css/soguheimur.css" th:href="@{/css/soguheimur.css}" />
 
-  <body>
-  	<h1 th:text="#{browse.title}">View story</h1>
-  	<p th:text="${storyTitle}">The title of the story</p>
-  	<p th:text="${storyText}">The text of the story</p>    
-  </body>
+<title th:text="#{browse.title}">Browse</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+</head>
+
+<body>
+	<h1 th:text="#{browse.title}">View story</h1>
+	<p th:text="${storyTitle}">The title of the story</p>
+	<p th:text="${storyText}">The text of the story</p>
+</body>
 
 </html>

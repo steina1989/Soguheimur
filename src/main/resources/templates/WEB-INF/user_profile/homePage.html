@@ -13,23 +13,39 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<head>
-		<title>Heimasæðið þitt</title>
-		<link rel="stylesheet" type="text/css" media="all" 
-		href="../../../css/soguheimur.css" th:href="@{../../../css/soguheimur.css}" />
-		
-	</head>
-	<body>
+<head>
+<title>Heimasvæðið þitt</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../../../css/soguheimur.css"
+	th:href="@{../../../css/soguheimur.css}" />
 
-		<h1>Heimasvæðið þitt</h1>
+</head>
+<body>
 
-		<div>
-			<a href="/compose/newStory">Senda inn sögur</a>
-		</div>
-		<div>
-			<p>Listi af sögum.</p>
-		</div>
+	<h1>Heimasvæðið þitt</h1>
 
-	</body>
+
+
+	<div>
+		<a href="/compose/newStory">Senda inn sögur</a>
+	</div>
+	<div>
+		<p>Listi af sögum.</p>
+	</div>
+
+
+	<table>
+		<tr>
+			<th>DATE</th>
+			<th>CUSTOMER</th>
+			<th>TOTAL</th>
+			<th></th>
+		</tr>
+		<tr th:each="story : ${stories}" >
+			<td th:text="${story.title}">My story</td>
+		</tr>
+	</table>
+
+</body>
 
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
 <!-- 
  * Authors:
  * Ásgerður Inna aia11@hi.is
@@ -9,7 +10,6 @@
  
  This page is used to create a new profile.
  -->
-<html xmlns:th="http://www.thymeleaf.org">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -22,7 +22,8 @@
     <h1>Búa til aðgang
     <p><span th:text="#{CreateProfile.CreateAccount}">Skapa aðgang</span><br/></p> 
     </h1>
-    <main>
+    main>
+
       <form method="POST" action="createUser">
         <fieldset>
           <legend>Nýr Notandi
