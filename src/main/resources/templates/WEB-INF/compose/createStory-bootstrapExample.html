@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+    th:with="lang=${#locale.language}" th:lang="${lang}">
+<!-- 
+ * Authors:
+ * Ásgerður Inna aia11@hi.is
+ * Hrafnhildur Olga hoh44@hi.is
+ * Ólafur Konráð oka4@hi.is
+ * Steina Dögg sdv6@hi.is
+ 
+ Displayed after following the link from the user's home page to submit a story.
+ -->
+<head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- EÞH Vissi ekki hvaða CSS þú ætlaðir að nota fyrir form-group o.s.frv. --> 
+<link rel="stylesheet" 
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+        crossorigin="anonymous" />
+
+<!-- Þinn css -->
+    <title>
+   
+    Senda inn Sögu
+  
+    </title>
+</head>
+<body>
+
+<h1>
+Söguheimur
+</h1>
+
+<h2> 
+<span th:text="#{createStory.Heading}">Hér getur þú sent inn söguna þína</span><br/>
+</h2>
+	<form method="POST" action="submit">
+        <div class="form-group">
+          <label class="" th:text="#{createStory.Title}">Titill:</label>
+          <input class="form-control" type="text" name="title" id="title" placeholder="Titill" required="true"></input>
+        </div>
+        <div class="form-group">
+          <div>
+            <label class="" th:text="#{createStory.Text}">Texti:</label>
+          </div>
+          <textarea id="new-entry" name="text" class="form-control" rows="10" cols="40" placeholder="Sagan þín..."></textarea>
+        </div>
+        <input type="submit" value="Senda Inn"/>
+      </form>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" 
+    integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" 
+    crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" 
+    integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" 
+    crossorigin="anonymous"></script>
+ 
+</body>
+
+</html>
