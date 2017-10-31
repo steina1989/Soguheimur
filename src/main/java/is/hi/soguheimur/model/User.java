@@ -1,12 +1,19 @@
 package is.hi.soguheimur.model;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+
 
 /**
  * @author Ásgerður Inna aia11@hi.is
@@ -18,13 +25,12 @@ import javax.persistence.Table;
  */
 
 @Entity
-@Table(name = "users")
+@Table(name="users")
 public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
 	private String fullName;
 	private String userName;
 	private Date bornDate;
@@ -32,10 +38,16 @@ public class User {
 	private String aboutMe;
 	private String school;
 	private String passwordHash;
+	@OneToMany(mappedBy = "user",targetEntity=Publication.class,
+			cascade = CascadeType.ALL, 
+	        orphanRemoval = true)
+	private List<Publication> publications;
 	
 	public User(String userName, String passwordHash) {
 		this.userName = userName;
 		this.passwordHash = passwordHash;
+	};
+	public User(){
 		
 	};
 
@@ -125,6 +137,16 @@ public class User {
 	@Override
 	public String toString() {
 		return String.format("<BR>" + "nafn: " + fullName + "<BR>" + "lykilord: ");
+	}
+
+
+
+	public List<Publication> getPublications() {
+		return publications;
+	}
+
+	public void setPublications(List<Publication> publications) {
+		this.publications = publications;
 	}
 
 }

@@ -3,20 +3,26 @@ package is.hi.soguheimur.model;
 import java.util.ArrayList;
 import java.util.Date;
 
+import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
  * @author Steina Dögg sdv6@hi.is
  * 
- * Description: Encapsulates metadata of a publication.
+ * Description: Encapsulates a Publication.
+ * 
  */
 @Entity
-@Table(name="publicationMeta")
-public class PublicationMeta {
+public class Publication {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,15 +32,22 @@ public class PublicationMeta {
 	private Date date;
 	private int rating;
 	private ArrayList<String> tags;
-	private String text;
+	@Basic(fetch = FetchType.LAZY )
+	private String text;	
+	@ManyToOne(targetEntity=User.class)
+	@JoinColumn(name="user_id")
+	private User user;
+ 
 	
-	public PublicationMeta(String title, String text)
+	public Publication(String title, String text, User user)
 	{
 		this.title = title;
 		this.text = text;
+		this.user = user;
+		this.date = new Date();
 	}
 	
-	public PublicationMeta() {
+	public Publication() {
 		
 	}
 	
@@ -80,6 +93,8 @@ public class PublicationMeta {
 	public void setTags(ArrayList<String> tags) {
 		this.tags = tags;
 	}
+
+
 	
 	
 	
