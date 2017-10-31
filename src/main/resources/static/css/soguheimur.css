@@ -33,6 +33,7 @@ h1{
   padding: 5px;
   padding-left: 10%;
   padding-right: 10%;
+  color: #46120C;
 }
 
 header p{
@@ -59,29 +60,16 @@ blockquote{
   float: right;
 }
 
-h2{
-  margin: 5px;
-  padding: 5px;
-  padding-left: 10%;
-  padding-right: 10%;
-}
-
-h3{
-  margin: 5px;
-  padding: 5px;
-  padding-left: 10%;
-  padding-right: 10%;
-}
-
-h4{
-  margin: 5px;
-  padding: 5px;
-  padding-left: 10%;
-  padding-right: 10%;
-}
-
 main{
   background-color: #DFCBBD;
+  color: #46120C;
+}
+
+h1{
+  margin: 5px;
+  padding: 5px;
+  padding-left: 10%;
+  padding-right: 10%;
   color: #46120C;
 }
 
@@ -91,6 +79,12 @@ p {
    padding-left: 15%;
    padding-right: 15%;
    font-size: 20px;
+   color: #46120C;
+}
+
+label {
+   font-size: 20px;
+   color: #46120C;
 }
 
 form {
@@ -169,30 +163,14 @@ select {
 }
 
 textarea {
-	width: 1000px;
-	height: 1200px;
-	border: 3px solid #46120C;
-	padding: 5px;
-	font-family: 'Gentium Book Basic', serif;
-	background-position: bottom right;
-	background-repeat: no-repeat;
+  width: 1000px;
+  height: 1200px;
+  border: 3px solid #46120C;
+  padding: 5px;
+  font-family: 'Gentium Book Basic', serif;
+  background-position: bottom right;
+  background-repeat: no-repeat;
   background-color: #EBDBD8;
-}
-
-#button {
-  margin: 10px;
-  padding: 10px;
-  padding-left: 15%;
-  padding-right: 15%;
-  font-size: 20px;
-  background-color: #EBDBD8;
-  border: 2px solid #46120C;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  color: #46120C;
 }
 
 button{

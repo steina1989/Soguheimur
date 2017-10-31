@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!-- Authors:  
+	Hrafnhildur Olga Hjaltadóttir hoh44@hi.is
+	File that holds the header for the other sites.
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Header</title>
+	<link rel="stylesheet" type="text/css" media="all"
+	href="../../../css/soguheimur.css"
+	th:href="@{../../../css/soguheimur.css}" />
+</head>
+<body>
+	<div class="test" th:fragment="link">
+		<nav>
+          <ul>
+            <li><a href="/usr/homepage" th:text="#{link.HomePage}">HomePage</a></li>
+            <li><a href="/browse" th:text="#{link.Stories}">Stories</a></li>
+          </ul>
+        </nav>
+      </div>
+</body>
+</html>
