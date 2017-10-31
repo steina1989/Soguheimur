@@ -2,6 +2,10 @@ package is.hi.soguheimur.configuration;
 
 import java.util.Arrays;
 import java.util.Collection;
+
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -9,6 +13,9 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Component;
+
+import is.hi.soguheimur.model.User;
+import is.hi.soguheimur.services.UserService;
 
 /**
  * 
@@ -19,6 +26,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class SoguheimurAuthentProvider implements AuthenticationProvider {
+	@Autowired UserService userService;
 
 	/**
 	 * Compares the input credentials with those stored in the database.
@@ -29,25 +37,19 @@ public class SoguheimurAuthentProvider implements AuthenticationProvider {
 	 */
 	@Override
 	public Authentication authenticate(Authentication authentication) throws AuthenticationException {
-		System.out.println("Authenticatinnnn");
+		System.out.println("Authenticating");
 
 		String name = authentication.getName();
 		String password = authentication.getCredentials().toString();
-		Collection<? extends GrantedAuthority> bla = authentication.getAuthorities();
-		System.out.println(name);
-		System.out.println(password);
+
+		User user = userService.findUserByUsername(name);
 		
 		GrantedAuthority authorities = new SimpleGrantedAuthority("ROLE_USER");
 		Collection<GrantedAuthority> collection = Arrays.asList(authorities);
 
-		/*
-		 * get user from repository by username if user.passhash != hash(password)
-		 * return null else return a new usernamepwauthentiationtoken
-		 */
-		UsernamePasswordAuthenticationToken a = new UsernamePasswordAuthenticationToken(
-                name, password, collection);
-
-		if (name.equals("admin") && password.equals("demo")) {
+		if (name.equals(user.getUserName()) && password.equals(user.getPasswordHash())) {
+			UsernamePasswordAuthenticationToken a = new UsernamePasswordAuthenticationToken(
+	                name, password, collection);
 			return a;
 		}
 		else return null;
