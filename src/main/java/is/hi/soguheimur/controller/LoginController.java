@@ -35,7 +35,6 @@ public class LoginController {
 	// Login form with error
 	@RequestMapping("/login-error")
 	public String loginError(Model model) {
-		System.out.println("errrrÓÓÓÓÓrÓÓÓÓÓrÓÓÓÓÓrÓÓÓÓÓÓó");
 		model.addAttribute("loginError", true);
 		return "login";
 	}
