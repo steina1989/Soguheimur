@@ -82,6 +82,36 @@ p {
    color: #46120C;
 }
 
+span {
+   margin: 10px;
+   padding: 10px;
+   padding-left: 15%;
+   padding-right: 15%;
+   font-size: 20px;
+   color: #46120C;
+}
+
+table {
+   width: 60%;
+   margin: 10px;
+   padding: 50px;
+   padding-left: 15%;
+   padding-right: 15%;
+   font-size: 20px;
+   color: #46120C;
+   border: 3px solid #46120C;
+   border-collapse: collapse;
+}
+
+th, td {
+   padding-left: 15%;
+   padding-right: 15%;
+   display: inline;
+   text-align: left;
+   font-size: 20px;
+   color: #46120C;
+}
+
 label {
    font-size: 20px;
    color: #46120C;
@@ -117,6 +147,21 @@ fieldset{
 }
 
 #password {
+  width: 250px;
+  height: 40px;
+  border: 3px solid #46120C;
+  margin: 10px;
+  padding: 10px;
+  font-family: 'Gentium Book Basic', serif;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-color: #EBDBD8;
+  display: inline-block;
+  font-size: 16px;
+  color: #46120C;
+}
+
+#title {
   width: 250px;
   height: 40px;
   border: 3px solid #46120C;
@@ -187,6 +232,20 @@ button{
   display: inline-block;
   font-size: 16px;
   color: #46120C;
+}
+
+a {
+    margin: 10px;
+    padding: 10px;
+    padding-left: 15%;
+    padding-right: 15%;
+    display: inline-block;
+    color: #46120C;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Gentium Book Basic', serif;
+    font-size: 20px;
 }
 
 ul {
