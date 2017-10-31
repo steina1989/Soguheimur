@@ -1,15 +1,12 @@
 package is.hi.soguheimur.controller;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import is.hi.soguheimur.services.PublicationService;
+import is.hi.soguheimur.model.User;
+import is.hi.soguheimur.services.UserService;
 
 /**
  * Controller for the login at soguheimur
@@ -21,9 +18,12 @@ import is.hi.soguheimur.services.PublicationService;
 @Controller
 @RequestMapping("/") //
 public class LoginController {
-	
+
+	@Autowired
+	UserService userService;
+
 	@RequestMapping("")
-	public String blablablablablablal() {
+	public String temporaryDev() {
 		return "redirect:compose/newStory";
 	}
 
@@ -41,8 +41,8 @@ public class LoginController {
 
 	@RequestMapping("/dev")
 	public String dev(Authentication authentication) {
-		if (authentication != null) System.out.println(authentication.toString());
-		else System.out.println("------Auth null-------");
+		User user = new User("admin", "demo");
+		userService.save(user);
 		return "login";
 	}
 
