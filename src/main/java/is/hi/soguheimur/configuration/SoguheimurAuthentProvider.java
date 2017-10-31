@@ -40,14 +40,17 @@ public class SoguheimurAuthentProvider implements AuthenticationProvider {
 
 		User user = userService.findUserByUsername(name);
 
-		GrantedAuthority authorities = new SimpleGrantedAuthority("ROLE_USER");
-		Collection<GrantedAuthority> collection = Arrays.asList(authorities);
+		if (user != null) {
+			GrantedAuthority authorities = new SimpleGrantedAuthority("ROLE_USER");
+			Collection<GrantedAuthority> collection = Arrays.asList(authorities);
 
-		if (name.equals(user.getUserName()) && password.equals(user.getPasswordHash())) {
-			UsernamePasswordAuthenticationToken a = new UsernamePasswordAuthenticationToken(name, password, collection);
-			return a;
-		} else
-			return null;
+			if (name.equals(user.getUserName()) && password.equals(user.getPasswordHash())) {
+				UsernamePasswordAuthenticationToken a = new UsernamePasswordAuthenticationToken(name, password,
+						collection);
+				return a;
+			}
+		}
+		return null;
 	}
 
 	/**
