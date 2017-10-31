@@ -16,9 +16,14 @@
 
 <head>
 
-<title>Senda inn Sögu</title>
+	<title>Senda inn Sögu</title>
+	<link rel="stylesheet" type="text/css" media="all"
+	href="../../../css/soguheimur.css"
+	th:href="@{../../../css/soguheimur.css}" />
+
 </head>
 <body>
+	<div th:replace="fragments/link :: link">&nbsp;</div>
 
 	<h1>Söguheimur</h1>
 
@@ -41,6 +46,7 @@
 		</div>
 		<input type="submit" value="Senda Inn" />
 	</form>
+	
 </body>
 
 </html>

@@ -15,14 +15,21 @@
 
 <head>
     <title>
-    <p><span th:text="#{submSuccess.Title}">Ný Saga</span><br/></p>
+    	<p><span th:text="#{submSuccess.Title}">Ný Saga</span><br/></p>
     </title>
+    <link rel="stylesheet" type="text/css" media="all"
+	href="../../../css/soguheimur.css"
+	th:href="@{../../../css/soguheimur.css}" />
 </head>
 <body>
 
 <h1>
-<span th:text="#{submSuccess.conformation}">Sagan hefur verið send inn!</span><br/>
+	<span th:text="#{submSuccess.conformation}">Sagan hefur verið send inn!</span><br/>
 </h1>
+
+<div>
+		<a href="/usr/homePage">Halda áfram á heimasíðu</a>
+	</div>
 
 </body>
 
