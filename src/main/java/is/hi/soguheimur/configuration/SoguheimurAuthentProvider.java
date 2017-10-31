@@ -2,9 +2,6 @@ package is.hi.soguheimur.configuration;
 
 import java.util.Arrays;
 import java.util.Collection;
-
-import javax.servlet.http.HttpSession;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -13,7 +10,6 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Component;
-
 import is.hi.soguheimur.model.User;
 import is.hi.soguheimur.services.UserService;
 
@@ -26,7 +22,8 @@ import is.hi.soguheimur.services.UserService;
  */
 @Component
 public class SoguheimurAuthentProvider implements AuthenticationProvider {
-	@Autowired UserService userService;
+	@Autowired
+	UserService userService;
 
 	/**
 	 * Compares the input credentials with those stored in the database.
@@ -37,22 +34,20 @@ public class SoguheimurAuthentProvider implements AuthenticationProvider {
 	 */
 	@Override
 	public Authentication authenticate(Authentication authentication) throws AuthenticationException {
-		System.out.println("Authenticating");
 
 		String name = authentication.getName();
 		String password = authentication.getCredentials().toString();
 
 		User user = userService.findUserByUsername(name);
-		
+
 		GrantedAuthority authorities = new SimpleGrantedAuthority("ROLE_USER");
 		Collection<GrantedAuthority> collection = Arrays.asList(authorities);
 
 		if (name.equals(user.getUserName()) && password.equals(user.getPasswordHash())) {
-			UsernamePasswordAuthenticationToken a = new UsernamePasswordAuthenticationToken(
-	                name, password, collection);
+			UsernamePasswordAuthenticationToken a = new UsernamePasswordAuthenticationToken(name, password, collection);
 			return a;
-		}
-		else return null;
+		} else
+			return null;
 	}
 
 	/**
