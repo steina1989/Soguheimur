@@ -13,9 +13,13 @@
 </head>
 
 <body>
-	<h1 th:text="#{browse.title}">View story</h1>
-	<p th:text="${storyTitle}">The title of the story</p>
-	<p th:text="${storyText}">The text of the story</p>
+	<div th:if="${success == false}">
+		<p th:text="#{viewStory.nostory}">No such story</p>
+	</div>
+	<div th:if="${success == true}">
+		<p th:text="${pub.title}">The title of the story</p>
+		<p th:text="${pub.text}">The text of the story</p>
+	</div>
 </body>
 
 </html>
