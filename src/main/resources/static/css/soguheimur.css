@@ -5,12 +5,13 @@ body{
     font-family: 'Gentium Book Basic', serif;
 }
 
-/*img{
+img{
   width: 100%;
   height: auto;
-}*/
+}
 
 header {
+  background-image: url("bgsmasogur.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -34,6 +35,30 @@ h1{
   padding-right: 10%;
 }
 
+header p{
+  font-size: 15px;
+  font-style: italic;
+  line-height: 150%;
+  margin: 0 0 20px 0;
+  padding: 0 0 0 40px;
+  width: calc(50%);
+  float: right;
+}
+
+header .space{
+  float: right;
+}
+
+blockquote{
+  font-size: 15px;
+  font-style: italic;
+  line-height: 150%;
+  margin: 0 0 20px 0;
+  padding: 0 0 0 40px;
+  width: calc(50%);
+  float: right;
+}
+
 h2{
   margin: 5px;
   padding: 5px;
@@ -53,16 +78,6 @@ h4{
   padding: 5px;
   padding-left: 10%;
   padding-right: 10%;
-}
-
-blockquote{
-  font-size: 15px;
-  font-style: italic;
-  line-height: 150%;
-  margin: 0 0 20px 0;
-  padding: 0 0 0 40px;
-  width: calc(50%);
-  float: right;
 }
 
 main{
@@ -92,15 +107,49 @@ fieldset{
   font-size: 20px;
 }
 
-input{
-  width: 200px;
-  height: 25px;
+#username {
+  width: 250px;
+  height: 40px;
   border: 3px solid #46120C;
-  padding: 5px;
+  margin: 10px;
+  padding: 10px;
   font-family: 'Gentium Book Basic', serif;
   background-position: bottom right;
   background-repeat: no-repeat;
   background-color: #EBDBD8;
+  display: inline-block;
+  font-size: 16px;
+  color: #46120C;
+}
+
+#password {
+  width: 250px;
+  height: 40px;
+  border: 3px solid #46120C;
+  margin: 10px;
+  padding: 10px;
+  font-family: 'Gentium Book Basic', serif;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-color: #EBDBD8;
+  display: inline-block;
+  font-size: 16px;
+  color: #46120C;
+}
+
+input{
+  width: 100px;
+  height: 40px;
+  border: 3px solid #46120C;
+  margin: 10px;
+  padding: 10px;
+  font-family: 'Gentium Book Basic', serif;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-color: #EBDBD8;
+  display: inline-block;
+  font-size: 16px;
+  color: #46120C;
 }
 
 em{
@@ -130,7 +179,7 @@ textarea {
   background-color: #EBDBD8;
 }
 
-button{
+#button {
   margin: 10px;
   padding: 10px;
   padding-left: 15%;
@@ -141,6 +190,22 @@ button{
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  color: #46120C;
+}
+
+button{
+  width: 100px;
+  height: 40px;
+  border: 3px solid #46120C;
+  margin: 10px;
+  padding: 10px;
+  font-family: 'Gentium Book Basic', serif;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-color: #EBDBD8;
+  text-align: center;
   display: inline-block;
   font-size: 16px;
   color: #46120C;
