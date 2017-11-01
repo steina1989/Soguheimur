@@ -1,21 +1,16 @@
 package is.hi.soguheimur.controller;
 
 import java.util.Map;
-
 import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.web.ErrorAttributes;
 import org.springframework.boot.autoconfigure.web.ErrorController;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.ServletRequestAttributes;
-import org.springframework.web.servlet.ModelAndView;
 
-import is.hi.soguheimur.model.Publication;
 
 /**
  * Error controller
@@ -43,10 +38,9 @@ public class SoguheimurErrorController implements ErrorController {
 	}
 	
     /**
-     * Nær í villu-attribute sem komu út úr Http beiðni 
-     * @param request  Http beiðnin 
+     * Fetches the request and its stack trace
      * @param includeStackTrace ef true þá er skilað stack trace annars ekki 
-     * @return mengi af tvíundum með nafni af attributi og gildi þeirra 
+     * @return Map/Set of 2-tuples name/value pairs
      */
     private Map<String, Object> getErrorAttributes(HttpServletRequest request, boolean includeStackTrace) {
 		RequestAttributes requestAttributes = new ServletRequestAttributes(request);
