@@ -1,8 +1,8 @@
 
 import is.hi.soguheimur.controller.ComposeController;
-import static org.assertj.comre.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.Test;
-import org.junit.runner.Runwith;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -12,16 +12,23 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 public class SmokeTest {
 
+/*
+ * a)	Athugið  hvort forritið keyri og að einhver af controller klösunum verður til. 
+ * Notið AssertJ (assertThat() o.fl. ) til að athuga lögmæti. 
+ * Kallið test klasann SmokeTest.java 
+*/	
+
+	
 @Autowired
-ComposeController composeController;
+ComposeController ComposeController;
 
 /* 
- * Aðferð til að athuga hvort controllerin hefur verið búinn til
+ * Method that checks if the controller has been created.
 */
 
 @Test // defines it as a testing method
 public void contextLoads() {
-	assertThat(composeController).isNotNull(); // Tests to see if controller has been created
+	assertThat(ComposeController).isNotNull(); // Tests to see if controller has been created
 }
 
 }
