@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 
-<!-- 
- * Authors:
- * Ã�sgerÃ°ur Inna aia11@hi.is
- * Hrafnhildur Olga hoh44@hi.is
- * Ã“lafur KonrÃ¡Ã° oka4@hi.is
- * Steina DÃ¶gg sdv6@hi.is
- 
+<!--  
  Displayed after you follow the link from your log in page.
  -->
 <html xmlns:th="http://www.thymeleaf.org">
@@ -16,16 +10,14 @@
 <head>
 <title>Heimasvæðið þitt</title>
 <link rel="stylesheet" type="text/css" media="all"
-	href="../../../css/soguheimur.css"
-	th:href="@{../../../css/soguheimur.css}" />
+	href="../css/soguheimur.css" th:href="@{/css/soguheimur.css}" />
 
 </head>
 <body>
+	<div th:replace="fragments/header :: header">&nbsp;</div>
+	<div th:replace="fragments/link :: link">&nbsp;</div>
 
 	<h1>Heimasvæðið þitt</h1>
-
-
-
 	<div>
 		<a href="/compose/newStory">Senda inn sögur</a>
 	</div>
@@ -36,13 +28,16 @@
 
 	<table>
 		<tr>
-			<th>DATE</th>
-			<th>CUSTOMER</th>
-			<th>TOTAL</th>
-			<th></th>
+			<th>Title</th>
+			<th>Date</th>
+			<th>Likes</th>
+
 		</tr>
-		<tr th:each="story : ${stories}" >
+		<tr th:each="story : ${stories}">
 			<td th:text="${story.title}">My story</td>
+			<td th:text="${#dates.format(story.date, 'dd-MMM-yy')}">My story</td>
+			<td th:text="${story.rating}">My story</td>
+			
 		</tr>
 	</table>
 

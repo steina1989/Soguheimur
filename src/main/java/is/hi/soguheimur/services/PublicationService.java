@@ -4,10 +4,8 @@ package is.hi.soguheimur.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import is.hi.soguheimur.model.PublicationMeta;
-import is.hi.soguheimur.model.PublicationText;
-import is.hi.soguheimur.repository.PublicationMetaRepository;
-import is.hi.soguheimur.repository.PublicationTextRepository;
+import is.hi.soguheimur.model.Publication;
+import is.hi.soguheimur.repository.PublicationRepository;
 
 /**
  * 
@@ -15,27 +13,19 @@ import is.hi.soguheimur.repository.PublicationTextRepository;
  * Oct 21, 2017
  * HBV501G Software Project 1 University of Iceland
  * 
- * Services for models publicationMeta and publicationText.
- * It's mostly used to 
+ * Services for Publications
  */
 @Service
 public class PublicationService {
-	@Autowired PublicationMetaRepository pubMetaRep;
-	@Autowired PublicationTextRepository pubTextRep;
+	@Autowired PublicationRepository pubRep;
 
-    
-    public PublicationMeta save(PublicationMeta pub) {
-        return pubMetaRep.save(pub);
+    public Publication save(Publication pub) {
+    	return pubRep.save(pub);
     }
-    
-    public PublicationText save(PublicationText pub) {
-    	return pubTextRep.save(pub);
-    }
-    
-    public PublicationMeta findById(long id) {
-    	return pubMetaRep.findById(id);
-    }
-    
+
+	public Publication findById(long id) {
+		return pubRep.findById(id);
+	}
     
     
 }

@@ -1,12 +1,20 @@
 package is.hi.soguheimur.controller;
 
+import java.security.Principal;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import is.hi.soguheimur.model.Publication;
 import is.hi.soguheimur.model.User;
 import is.hi.soguheimur.services.PublicationService;
 import is.hi.soguheimur.services.UserService;
@@ -92,11 +100,20 @@ public class UserController {
 	}
 
 	/*
-	 * Returns the homePage.jsp file.
+	 * Fetches list of stories by a username and returns the homePage with it.
 	 */
 	@RequestMapping("/homePage")
-	public String homePage() {
+	public String homePage(ModelMap model) {
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		if (authentication != null) {
+			String userName = authentication.getName();
+			User user = userService.findUserByUsername(userName);
+			List<Publication> list = user.getPublications();
+			model.addAttribute("stories", list);
+			return parent + "homePage";
+		}
 		return parent + "homePage";
+
 	}
 
 }

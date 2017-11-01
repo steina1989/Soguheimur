@@ -9,7 +9,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import is.hi.soguheimur.model.PublicationMeta;
+import is.hi.soguheimur.model.Publication;
 import is.hi.soguheimur.services.PublicationService;
 
 /**
@@ -24,9 +24,6 @@ import is.hi.soguheimur.services.PublicationService;
 @RequestMapping("/browse") // Makes all path relative to /browse
 public class BrowsingController {
 	
-    @Autowired
-    private MessageSource messageSource;
-
 	@Autowired
 	PublicationService pubService;
 	
@@ -41,23 +38,19 @@ public class BrowsingController {
 		return "demo/thdemo";
 	}
 	
-
-
 	/*
 	 * Returns a story by id.
 	 */
 	@RequestMapping(value = "/{id}")
 	public String viewStory(@PathVariable("id") long id, ModelMap model) {
 
-		PublicationMeta pmeta = pubService.findById(id);
-		if (pmeta != null) {
-			model.addAttribute("storyText", pmeta.getText());
-			model.addAttribute("storyTitle", pmeta.getTitle());
+		Publication pub = pubService.findById(id);
+		if (pub != null) {
+			model.addAttribute("success", true);
+			model.addAttribute("pub", pub);
 		} else {
-			model.addAttribute("storyText", "Sorry engin saga hér.");
-
+			model.addAttribute("success", false);
 		}
-
 		return "browse/viewStory";
 	}
 

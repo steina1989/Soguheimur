@@ -50,18 +50,6 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
 	        .logoutSuccessUrl("/index");
 	    
 	}
-	
-	/**
-	 * 
-	 * @param auth
-	 * @throws Exception
-	 */
-    @Autowired
-    public void configureGlobal(final AuthenticationManagerBuilder auth) throws Exception  {
-        auth
-            .inMemoryAuthentication()
-	            .withUser("admin").password("demo").roles("USER");
-    }
- 
+	 
 
 }
