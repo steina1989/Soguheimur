@@ -14,16 +14,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
  
 
-
-<head>
-    <title>
-    <span th:text="#{error.title}">Eitthvað fór úrskeiðis</span><br/>
-    </title>
-</head>
 <body>
 
 <h1>
 <span th:text="#{error.message}">Eitthvað fór úrskeiðis! Vinsamlegast reynið aftur</span><br/>
+    <p th:text="|HTTP ${attributes.status} ${attributes.error}|"></p>
+    <p th:text="${attributes.message}"></p>
 </h1>
 
 </body>
