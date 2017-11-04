@@ -3,9 +3,8 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 
-
 public class PasswordHasher {
-
+	
 	public static class HashPassword {  
 	    public static String hashPassword(String password) throws NoSuchAlgorithmException{
 	        MessageDigest md = MessageDigest.getInstance("MD5"); // Specifies wich algorithim there is beaing used
@@ -41,5 +40,7 @@ public class PasswordHasher {
 	        }
 	        
 	    }
+	
 	}
+	
 }

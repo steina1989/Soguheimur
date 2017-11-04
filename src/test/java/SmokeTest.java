@@ -8,7 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class) // creates the testing enviorment and runs test with the class Springrunner.class
-@SpringBootTest // all the context is established
+@SpringBootTest() // all the context is established
 
 public class SmokeTest {
 
