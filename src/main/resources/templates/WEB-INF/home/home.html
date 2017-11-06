@@ -11,40 +11,13 @@
 <title th:text="#{login.title}">Login page</title>
 </head>
 <body>
-	<header>
-      <section class="Saga">
-        <h1>Söguheimur</h1>
-          <p>
-            Deildu verkum þínum hér, sögum, ljóðum, leikritum eða hugleiðingum.
-          </p>
-          <div class="space">
-            <blockquote class="quote2">
-              “Stories you read when you're the right age never quite leave you. You may forget who wrote them or what the story was called.
-              Sometimes you'll forget precisely what happened, but if a story touches you it will stay with you, haunting the places in your mind
-              that you rarely ever visit.”
-              <footer class="quote-footer2">— <cite class="quote2">Neil Gaiman, M Is for Magic</cite></footer>
-            </blockquote>
-          </div>
-          <div class="space">
-            <blockquote class="quote1">
-              “Writing is something you do alone. Its a profession for introverts who want to tell you a story but don't want to make eye contact while doing it."
-              <footer class="quote-footer1">— <cite class="quote1">John Green</cite></footer>
-            </blockquote>
-          </div>
-      </section>
-    </header>
-
+	
+	<div th:replace="fragments/header :: header">&nbsp;</div>
 	
 	<h1 th:text="#{homepage.welcome}">Welcome</h1>
 
-        <nav>
-          <ul>
-            <li><a href="/usr/homepage">Innskráning</a></li>
-            <li><a href="/browse">Skoða sögur</a></li>
-          </ul>
-        </nav>
-      </div>
-	
+    
+	<div th:replace="fragments/homeLink :: homeLink">&nbsp;</div>
 
 </body>
 </html>
