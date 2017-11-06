@@ -1,7 +1,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body{
-    background: #DFCBBD;
+    background: #95E5E5;
     font-family: 'Gentium Book Basic', serif;
 }
 
@@ -24,7 +24,7 @@ header {
   font-family: 'Gentium Book Basic', serif;
   font-size: 20px;
   font-weight: bold;
-  color: #46120C;
+  color: #2A4040;
   text-align: right;
 }
 
@@ -33,7 +33,7 @@ h1{
   padding: 5px;
   padding-left: 10%;
   padding-right: 10%;
-  color: #46120C;
+  color: #2A4040;
 }
 
 header p{
@@ -61,8 +61,8 @@ blockquote{
 }
 
 main{
-  background-color: #DFCBBD;
-  color: #46120C;
+  background-color: #95E5E5;
+  color: #2A4040;
 }
 
 h1{
@@ -70,7 +70,7 @@ h1{
   padding: 5px;
   padding-left: 10%;
   padding-right: 10%;
-  color: #46120C;
+  color: #2A4040;
 }
 
 p {
@@ -79,7 +79,7 @@ p {
    padding-left: 15%;
    padding-right: 15%;
    font-size: 20px;
-   color: #46120C;
+   color: #2A4040;
 }
 
 span {
@@ -88,7 +88,7 @@ span {
    padding-left: 15%;
    padding-right: 15%;
    font-size: 20px;
-   color: #46120C;
+   color: #2A4040;
 }
 
 table {
@@ -98,7 +98,7 @@ table {
    padding-left: 15%;
    padding-right: 15%;
    font-size: 20px;
-   color: #46120C;
+   color: #2A4040;
    border-collapse: collapse;
 }
 
@@ -107,12 +107,12 @@ th, td{
    padding-right: 15%;
    display: inline;
    font-size: 20px;
-   color: #46120C;
+   color: #2A4040;
 }
 
 label {
    font-size: 20px;
-   color: #46120C;
+   color: #2A4040;
 }
 
 form {
@@ -132,65 +132,65 @@ fieldset{
 #username {
   width: 250px;
   height: 40px;
-  border: 2px solid #46120C;
+  border: 2px solid #2A4040;
   border-radius: .2625em;
   margin: 10px;
   padding: 10px;
   font-family: 'Gentium Book Basic', serif;
   background-position: bottom right;
   background-repeat: no-repeat;
-  background-color: #EBDBD8;
+  background-color: #7DBFBF;
   display: inline-block;
   font-size: 16px;
-  color: #46120C;
+  color: #2A4040;
 }
 
 #password {
   width: 250px;
   height: 40px;
-  border: 2px solid #46120C;
+  border: 2px solid #2A4040;
   border-radius: .2625em;
   margin: 10px;
   padding: 10px;
   font-family: 'Gentium Book Basic', serif;
   background-position: bottom right;
   background-repeat: no-repeat;
-  background-color: #EBDBD8;
+  background-color: #7DBFBF;
   display: inline-block;
   font-size: 16px;
-  color: #46120C;
+  color: #2A4040;
 }
 
 #title {
   width: 250px;
   height: 40px;
-  border: 2px solid #46120C;
+  border: 2px solid #2A4040;
   border-radius: .2625em;
   margin: 10px;
   padding: 10px;
   font-family: 'Gentium Book Basic', serif;
   background-position: bottom right;
   background-repeat: no-repeat;
-  background-color: #EBDBD8;
+  background-color: #7DBFBF;
   display: inline-block;
   font-size: 16px;
-  color: #46120C;
+  color: #2A4040;
 }
 
 input{
   width: 100px;
   height: 40px;
-  border: 1px solid #46120C;
+  border: 1px solid #2A4040;
   border-radius: .2625em;
   margin: 10px;
   padding: 10px;
   font-family: 'Gentium Book Basic', serif;
   background-position: bottom right;
   background-repeat: no-repeat;
-  background-color: #EBDBD8;
+  background-color: #95E5E5;
   display: inline-block;
   font-size: 16px;
-  color: #46120C;
+  color: #2A4040;
 }
 
 em{
@@ -201,30 +201,30 @@ select {
   margin: 10px;
   padding: 10px 10px;
   font-size: 15px;
-  background-color: #EBDBD8;
-  border: 2px solid #46120C;
+  background-color: #95E5E5;
+  border: 2px solid #2A4040;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  color: #46120C;
+  color: #2A4040;
 }
 
 textarea {
   width: 1000px;
   height: 1200px;
-  border: 1px solid #46120C;
+  border: 1px solid #2A4040;
   border-radius: .2625em;
   padding: 5px;
   font-family: 'Gentium Book Basic', serif;
   background-position: bottom right;
   background-repeat: no-repeat;
-  background-color: #EBDBD8;
+  background-color: #95E5E5;
 }
 
 button{
   width: 100px;
   height: 40px;
-  border: 1px solid #46120C;
+  border: 1px solid #2A4040;
   border-radius: .2625em;
   box-shadow: 0 .375em .313em -0.313em rgba(0,0,0,.8), inset 0 .063em rgba(255,255,255,.4), inset 0 -0.188em rgba(0,0,0,.15);
   margin: 10px;
@@ -232,16 +232,16 @@ button{
   font-family: 'Gentium Book Basic', serif;
   background-position: bottom right;
   background-repeat: no-repeat;
-  background-color: #EBDBD8;
+  background-color: #95E5E5;
   text-align: center;
   display: inline-block;
   font-size: 16px;
-  color: #46120C;
+  color: #2A4040;
 }
 
 button:hover {
-  background-color: #46120C;
-  color: #EBDBD8;
+  background-color: #2A4040;
+  color: #95E5E5;
   box-shadow: 0 .125em rgba(255,255,255,.4), inset 0 .063em rgba(255,255, 255,.4), inset 0 -0.188em #0D331A;
 }
 
@@ -251,7 +251,7 @@ a {
     padding-left: 15%;
     padding-right: 15%;
     display: inline-block;
-    color: #46120C;
+    color: #2A4040;
     text-align: left;
     padding: 14px 16px;
     text-decoration: none;
@@ -264,7 +264,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #92857C;
+    background-color: #7DBFBF;
 }
 
 li {
@@ -275,7 +275,7 @@ li {
 
 li a {
     display: block;
-    color: #46120C;
+    color: #2A4040;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -284,5 +284,5 @@ li a {
 }
 
 li a:hover {
-    background-color: #926B50;
+    background-color: #95E5E5;
 }
