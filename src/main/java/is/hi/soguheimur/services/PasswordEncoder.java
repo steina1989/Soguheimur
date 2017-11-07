@@ -9,8 +9,9 @@ public class PasswordEncoder { // this main class is strictly for testing purpos
 		String UserPassword="Monkey";
 		System.out.println("Password as entered by user : "+UserPassword);
 		String EncodedPassword = createEncodedPassword(UserPassword);
+		String newEncodedPassword = createEncodedPassword(UserPassword);
 		System.out.println( "Password after Encription printed once : "+EncodedPassword);
-		System.out.println( "Password after Encription printed twice : "+EncodedPassword);
+		System.out.println( "Password after Encription printed twice : "+newEncodedPassword);
 		boolean confirmPasword = confirmPassword(UserPassword,UserPassword);
 		System.out.println( "Password confirmation : "+confirmPasword);				
 	}
