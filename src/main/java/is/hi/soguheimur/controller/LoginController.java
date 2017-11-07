@@ -29,7 +29,7 @@ public class LoginController {
 	@Autowired
 	UserService userService;
 
-	@RequestMapping("/home")
+	@RequestMapping("")
 	public String home() {
 		return "home/home";
 	}
