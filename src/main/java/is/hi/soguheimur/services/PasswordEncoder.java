@@ -1,7 +1,5 @@
 package is.hi.soguheimur.services;
 
-import static org.mockito.Matchers.matches;
-
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
