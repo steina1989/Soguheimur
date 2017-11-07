@@ -14,7 +14,9 @@
 	<div class="test" th:fragment="link">
 		<nav>
           <ul>
-            <li><a href="/dev" th:text="#{login.title}">Log In</a></li>
+            <li><a href="/login" th:text="#{login.title}">Log In</a></li>
+            <li><a href="/register" th:text="#{link.Register}">Register</a></li>
+            <li><a href="/compose/newStory" th:text="#{link.NewStory}">New Story</a></li>
             <li><a href="/browse" th:text="#{link.Stories}">Stories</a></li>
           </ul>
         </nav>

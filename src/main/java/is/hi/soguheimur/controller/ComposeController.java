@@ -50,8 +50,8 @@ public class ComposeController {
 	public String newStory(@RequestParam(value = "title") String title, @RequestParam(value = "text") String text) {
 
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-		String username = authentication.getName();
-		User user = userService.findUserByUsername(username);
+		String email = authentication.getName();
+		User user = userService.findUserByEmail(email);
 		Publication pub = new Publication(title, text, user);
 		pubService.save(pub);
 		return parent + "submSuccess";

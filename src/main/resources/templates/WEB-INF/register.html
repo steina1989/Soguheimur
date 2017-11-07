@@ -6,8 +6,9 @@
 <html xmlns:th="http://www.thymeleaf.org"
 	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
-
-<title th:text="#{register.title}">Login page</title>
+	<link rel="stylesheet" type="text/css" media="all"
+		href="../css/soguheimur.css" th:href="@{/css/soguheimur.css}" />
+	<title th:text="#{register.title}">Login page</title>
 </head>
 <body>
 	<div th:replace="fragments/header :: header">&nbsp;</div>
@@ -32,6 +33,7 @@
 	</table>
 	</form>
 	
+	<div th:replace="fragments/link :: link">&nbsp;</div>
 
 </body>
 </html>

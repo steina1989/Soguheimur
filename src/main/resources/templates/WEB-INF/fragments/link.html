@@ -14,9 +14,11 @@
 	<div class="test" th:fragment="link">
 		<nav>
           <ul>
-            <li><a href="/dev" th:text="#{link.HomePage}">HomePage</a></li>
+            <li><a href="/" th:text="#{link.HomePage}">HomePage</a></li>
+            <li><a href="/login" th:text="#{login.title}">Log In</a></li>
+            <li><a href="/compose/newStory" th:text="#{link.NewStory}">New Story</a></li>
             <li><a href="/browse" th:text="#{link.Stories}">Stories</a></li>
-            <li><a th:href="@{/logout}">Logout</a></li>
+            <li><a th:href="@{/logout}" th:text="#{link.Logout}">Logout</a></li>
           </ul>
         </nav>
       </div>
