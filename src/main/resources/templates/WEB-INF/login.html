@@ -27,11 +27,7 @@
 			In</button>
 	</form>
 
-	<div>
-		<form action="#" th:action="@{/login}" method="post">
-			<input type="submit" value="Logout" />
-		</form>
-	</div>
+	
 
 	<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
 

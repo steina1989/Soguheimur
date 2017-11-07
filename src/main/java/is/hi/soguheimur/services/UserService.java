@@ -41,6 +41,17 @@ public class UserService   {
     public User findUserByUsername(String userName) {
     	return userRep.findByUserName(userName);
     }
+	public User findByEmail(String email) {
+		return userRep.findByEmail(email);
+		
+	}
+	public boolean existsUserName(User user) {
+		return (userRep.findByEmail(user.getEmail()) != null);
+	}
+	public User findUserByEmail(String email) {
+		return userRep.findByEmail(email);
+	}
+
 
 
 

@@ -35,17 +35,17 @@ public class SoguheimurAuthentProvider implements AuthenticationProvider {
 	@Override
 	public Authentication authenticate(Authentication authentication) throws AuthenticationException {
 
-		String name = authentication.getName();
+		String email = authentication.getName();
 		String password = authentication.getCredentials().toString();
 
-		User user = userService.findUserByUsername(name);
+		User user = userService.findUserByEmail(email);
 
 		if (user != null) {
 			GrantedAuthority authorities = new SimpleGrantedAuthority("ROLE_USER");
 			Collection<GrantedAuthority> collection = Arrays.asList(authorities);
 
-			if (name.equals(user.getUserName()) && password.equals(user.getPasswordHash())) {
-				UsernamePasswordAuthenticationToken a = new UsernamePasswordAuthenticationToken(name, password,
+			if (email.equals(user.getEmail()) && password.equals(user.getPasswordHash())) {
+				UsernamePasswordAuthenticationToken a = new UsernamePasswordAuthenticationToken(email, password,
 						collection);
 				return a;
 			}

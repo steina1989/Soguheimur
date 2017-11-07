@@ -106,8 +106,8 @@ public class UserController {
 	public String homePage(ModelMap model) {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 		if (authentication != null) {
-			String userName = authentication.getName();
-			User user = userService.findUserByUsername(userName);
+			String email = authentication.getName();
+			User user = userService.findUserByEmail(email);
 			List<Publication> list = user.getPublications();
 			model.addAttribute("stories", list);
 			return parent + "homePage";

@@ -26,6 +26,7 @@ header {
   font-weight: bold;
   color: #2A4040;
   text-align: right;
+  text-shadow: 0.5px 0.5px #fafafa;
 }
 
 h1{
@@ -129,38 +130,6 @@ fieldset{
   font-size: 20px;
 }
 
-#username {
-  width: 250px;
-  height: 40px;
-  border: 2px solid #2A4040;
-  border-radius: .2625em;
-  margin: 10px;
-  padding: 10px;
-  font-family: 'Gentium Book Basic', serif;
-  background-position: bottom right;
-  background-repeat: no-repeat;
-  background-color: #7DBFBF;
-  display: inline-block;
-  font-size: 16px;
-  color: #2A4040;
-}
-
-#password {
-  width: 250px;
-  height: 40px;
-  border: 2px solid #2A4040;
-  border-radius: .2625em;
-  margin: 10px;
-  padding: 10px;
-  font-family: 'Gentium Book Basic', serif;
-  background-position: bottom right;
-  background-repeat: no-repeat;
-  background-color: #7DBFBF;
-  display: inline-block;
-  font-size: 16px;
-  color: #2A4040;
-}
-
 #title {
   width: 250px;
   height: 40px;
@@ -178,16 +147,16 @@ fieldset{
 }
 
 input{
-  width: 100px;
+  width: 250px;
   height: 40px;
-  border: 1px solid #2A4040;
+  border: 2px solid #2A4040;
   border-radius: .2625em;
   margin: 10px;
   padding: 10px;
   font-family: 'Gentium Book Basic', serif;
   background-position: bottom right;
   background-repeat: no-repeat;
-  background-color: #95E5E5;
+  background-color: #7DBFBF;
   display: inline-block;
   font-size: 16px;
   color: #2A4040;
@@ -246,17 +215,12 @@ button:hover {
 }
 
 a {
-    margin: 10px;
-    padding: 10px;
-    padding-left: 15%;
-    padding-right: 15%;
-    display: inline-block;
-    color: #2A4040;
-    text-align: left;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-family: 'Gentium Book Basic', serif;
-    font-size: 20px;
+   margin: 10px;
+   padding: 10px;
+   padding-left: 15%;
+   padding-right: 15%;
+   font-size: 20px;
+   color: #2A4040;
 }
 
 ul {
@@ -264,18 +228,19 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #7DBFBF;
+    background-color: #287070;
+    box-shadow: 0 .125em rgba(255,255,255,.4), inset 0 .063em rgba(255,255, 255,.4), inset 0 -0.188em #2A4040;
 }
 
 li {
     float: left;
-    padding-left: 15%;
+    padding-left: 5%;
     /*padding-right: 15%;*/
 }
 
 li a {
     display: block;
-    color: #2A4040;
+    color: #7DBFBF;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -284,5 +249,7 @@ li a {
 }
 
 li a:hover {
-    background-color: #95E5E5;
+    background-color: #A6FFFF;
+    color: #2A4040;
+    box-shadow: 0 .125em rgba(255,255,255,.4), inset 0 .063em rgba(255,255, 255,.4), inset 0 -0.188em #7DBFBF;
 }
