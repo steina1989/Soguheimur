@@ -245,19 +245,6 @@ button:hover {
   box-shadow: 0 .125em rgba(255,255,255,.4), inset 0 .063em rgba(255,255, 255,.4), inset 0 -0.188em #0D331A;
 }
 
-a {
-    margin: 10px;
-    padding: 10px;
-    padding-left: 15%;
-    padding-right: 15%;
-    display: inline-block;
-    color: #2A4040;
-    text-align: left;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-family: 'Gentium Book Basic', serif;
-    font-size: 20px;
-}
 
 ul {
     list-style-type: none;
@@ -269,7 +256,7 @@ ul {
 
 li {
     float: left;
-    padding-left: 15%;
+    padding-left: 5%;
     /*padding-right: 15%;*/
 }
 

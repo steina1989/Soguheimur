@@ -22,9 +22,9 @@ public class LoginController {
 	@Autowired
 	UserService userService;
 
-	@RequestMapping("")
-	public String temporaryDev() {
-		return "redirect:compose/newStory";
+	@RequestMapping("/home")
+	public String home() {
+		return "home/home";
 	}
 
 	@RequestMapping("/login")

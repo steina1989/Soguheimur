@@ -16,11 +16,7 @@
           <ul>
             <li><a href="/dev" th:text="#{link.HomePage}">HomePage</a></li>
             <li><a href="/browse" th:text="#{link.Stories}">Stories</a></li>
-            <li>
-            	<form action="#" th:action="@{/login}" method="post">
-					<input type="submit" value="Logout" />
-				</form>
-			</li>
+            <li><a th:href="@{/logout}">Logout</a></li>
           </ul>
         </nav>
       </div>
