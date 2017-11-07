@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import is.hi.soguheimur.model.User;
+import is.hi.soguheimur.services.PasswordEncoder;
 import is.hi.soguheimur.services.UserService;
 
 /**
@@ -39,6 +40,7 @@ public class LoginController {
 		return "login";
 	}
 
+
 	// Login form with error
 	@RequestMapping("/login-error")
 	public String loginError(Model model) {
@@ -49,6 +51,9 @@ public class LoginController {
 	@RequestMapping(value="/register", method = RequestMethod.POST)
 	public String registerPost(ModelMap model, User user) {
 		if (!userService.existsUserName(user))  {
+			String nonCrypt = user.getPasswordHash();
+			String encrypted = PasswordEncoder.createEncodedPassword(nonCrypt);
+			user.setPasswordHash(encrypted);
 			userService.save(user);	
 			model.addAttribute("success",true);
 		}

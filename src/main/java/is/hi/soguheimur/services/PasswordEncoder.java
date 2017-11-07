@@ -2,9 +2,10 @@ package is.hi.soguheimur.services;
 
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
 
 // Bcript is better than most available encoders because it is too slow to be affected by brute force attacks within.
-
+@Service
 public class PasswordEncoder { // this main class is strictly for testing purposes, serves no other use
 	public static void main(String [] args) {
 		String UserPassword="Monkey";

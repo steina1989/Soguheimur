@@ -47,7 +47,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
 	        .failureUrl("/login-error")
 	        .and()
 	        .logout()
-	        .logoutSuccessUrl("/index");
+	        .logoutSuccessUrl("/");
 	    
 	}
 	 

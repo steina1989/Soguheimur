@@ -11,6 +11,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Component;
 import is.hi.soguheimur.model.User;
+import is.hi.soguheimur.services.PasswordEncoder;
 import is.hi.soguheimur.services.UserService;
 
 /**
@@ -25,6 +26,7 @@ public class SoguheimurAuthentProvider implements AuthenticationProvider {
 	@Autowired
 	UserService userService;
 
+
 	/**
 	 * Compares the input credentials with those stored in the database.
 	 * 
@@ -37,14 +39,14 @@ public class SoguheimurAuthentProvider implements AuthenticationProvider {
 
 		String email = authentication.getName();
 		String password = authentication.getCredentials().toString();
-
+		
 		User user = userService.findUserByEmail(email);
-
 		if (user != null) {
+			boolean passwordMatch = PasswordEncoder.confirmPassword(password, user.getPasswordHash());
 			GrantedAuthority authorities = new SimpleGrantedAuthority("ROLE_USER");
 			Collection<GrantedAuthority> collection = Arrays.asList(authorities);
-
-			if (email.equals(user.getEmail()) && password.equals(user.getPasswordHash())) {
+			
+			if (email.equals(user.getEmail()) && passwordMatch) {
 				UsernamePasswordAuthenticationToken a = new UsernamePasswordAuthenticationToken(email, password,
 						collection);
 				return a;
