@@ -48,6 +48,9 @@ public class UserService   {
 	public boolean existsUserName(User user) {
 		return (userRep.findByEmail(user.getEmail()) != null);
 	}
+	public User findUserByEmail(String email) {
+		return userRep.findByEmail(email);
+	}
 
 
 
