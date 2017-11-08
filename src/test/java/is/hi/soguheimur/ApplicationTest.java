@@ -1,5 +1,8 @@
 package is.hi.soguheimur;
-// 21:51
+/*
+ * @author Ólafur Konráð Albertsson oka4@hi.is
+ * 
+ * */
 
 import org.junit.Test; //
 import org.junit.runner.RunWith; //
@@ -38,9 +41,9 @@ public class ApplicationTest {
 
 @Test
 public void BrowseReturns() throws Exception {
-this.mockMvc.perform(get("/browse"))
+this.mockMvc.perform(get("/"))
 	.andDo(print()).andExpect(status().isOk())
-	.andExpect(content().string(containsString("Yes")));
+	.andExpect(content().string(containsString("Eitthvað")));
 }
 
 }

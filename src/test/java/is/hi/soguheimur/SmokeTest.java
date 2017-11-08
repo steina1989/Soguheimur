@@ -1,5 +1,8 @@
 package is.hi.soguheimur;
-
+/*
+ * @author Ólafur Konráð Albertsson oka4@hi.is
+ * 
+ * */
 import is.hi.soguheimur.controller.LoginController;
 import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.Test;
@@ -14,7 +17,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class) // creates the testing enviorment and runs test with the class Springrunner.class
 @SpringBootTest() // all the context is established
-@DataJpaTest
+//@DataJpaTest
 //@AutoConfigureTestDatabase(replace = NONE)
 public class SmokeTest {
 // 
@@ -25,7 +28,7 @@ public class SmokeTest {
 */	
 	
 @Autowired
-LoginController LoginController;
+LoginController loginController;
 
 /* 
  * Method that checks if the controller has been created.
@@ -33,6 +36,6 @@ LoginController LoginController;
 
 @Test // defines it as a testing method
 public void contextLoads() {
-	assertThat(LoginController).isNotNull(); // Tests to see if controller has been created
+	assertThat(LoginController.class).isNotNull(); // Tests to see if controller has been created
     }
 }

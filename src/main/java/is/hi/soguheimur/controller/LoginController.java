@@ -62,7 +62,6 @@ public class LoginController {
 		return "register";
 	}
 	
-
 	@RequestMapping(value="/register", method = RequestMethod.GET)
 	public String registerGet(ModelMap model, User user) {
 		return "register";

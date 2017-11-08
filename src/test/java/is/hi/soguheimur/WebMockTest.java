@@ -1,4 +1,8 @@
 package is.hi.soguheimur;
+/*
+ * @author Ólafur Konráð Albertsson oka4@hi.is
+ * 
+ * */
 import org.junit.Test; //
 import org.junit.runner.RunWith; //
 import org.springframework.beans.factory.annotation.Autowired; //
@@ -8,17 +12,21 @@ import org.springframework.boot.test.context.SpringBootTest; //
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;//
 import org.springframework.test.web.servlet.MockMvc;
-import is.hi.soguheimur.controller.ComposeController;
+
+import is.hi.soguheimur.controller.LoginController;
+import is.hi.soguheimur.controller.SoguheimurErrorController;
+
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.hamcrest.Matchers.containsString;
 
+
 /*
  * e)	Framkvæmið prófanir á controller og service. Kallið test klasann WebMockTest.java
 */
-@WebMvcTest (KennariController.class)
+@WebMvcTest (SoguheimurErrorController.class)
 
 public class WebMockTest {
 
@@ -31,7 +39,7 @@ private MockMvc;
 // Serstaklega gert fyrir Mockito safnið
 
 @MockBean
-DaginnService
+Error error;
 
 @Test
 public void testaLifirTrue() throws Exception {

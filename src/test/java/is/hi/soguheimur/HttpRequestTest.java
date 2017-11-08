@@ -1,5 +1,8 @@
 package is.hi.soguheimur;
-
+/*
+ * @author Ólafur Konráð Albertsson oka4@hi.is
+ * 
+ * */
 import is.hi.soguheimur.controller.ComposeController;
 import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.Test;
@@ -37,7 +40,7 @@ private TestRestTemplate restTemplate;
 @Test
 public void DoWeHaveIT() throws Exception {
 assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/", 
-		String.class)).contains("We Got it!");
+		String.class)).contains("Söguheimur");
 }
 
 }
