@@ -75,7 +75,7 @@ h1{
 }
 
 p {
-   margin: 10px;
+   margin: 0px;
    padding: 10px;
    padding-left: 15%;
    padding-right: 15%;
@@ -105,7 +105,7 @@ table {
 
 th, td{
    padding-left: 15%;
-   padding-right: 15%;
+   /*padding-right: 15%;*/
    display: inline;
    font-size: 20px;
    color: #2A4040;
@@ -215,8 +215,6 @@ button:hover {
 }
 
 a {
-   margin: 10px;
-   padding: 10px;
    padding-left: 15%;
    padding-right: 15%;
    font-size: 20px;
