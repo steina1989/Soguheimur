@@ -33,6 +33,7 @@ public class Publication {
 	private int rating;
 	private ArrayList<String> tags;
 	@Basic(fetch = FetchType.LAZY )
+	@Column(columnDefinition = "TEXT")
 	private String text;	
 	@ManyToOne(targetEntity=User.class)
 	@JoinColumn(name="user_id")
