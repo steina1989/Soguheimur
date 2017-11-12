@@ -6,18 +6,12 @@ package is.hi.soguheimur;
 import org.junit.Test; 
 import org.junit.runner.RunWith; 
 import org.springframework.beans.factory.annotation.Autowired; 
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.context.SpringBootTest; 
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
-
-import is.hi.soguheimur.controller.LoginController;
 import is.hi.soguheimur.services.PublicationService;
-import is.hi.soguheimur.configuration.SpringSecurityConfig;
 import is.hi.soguheimur.controller.BrowsingController;
-
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -35,8 +29,9 @@ import static org.hamcrest.Matchers.containsString;
 // Only the veflagið is booted but not the entire context. 
 //We can only ask to run SoguheimurErrorController Class  */
 
-//@WebMvcTest (LoginController.class)
-@WebMvcTest ({BrowsingController.class,SpringSecurityConfig.class})
+
+
+@WebMvcTest(controllers = { BrowsingController.class }, secure = false)
 public class WebLayerTest {
 
 @Autowired
@@ -57,7 +52,7 @@ this.mockMvc.perform(get("/browse/thdemo"))
 	.andExpect(status()
 	.isOk())
 	.andExpect(content()
-	.string(containsString("Söguheimur")));
+	.string(containsString("Home page")));
 
 }
 
