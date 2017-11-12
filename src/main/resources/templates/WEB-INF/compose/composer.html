@@ -28,9 +28,10 @@
 	<h1>Söguheimur</h1>
 
 	
-	<form method="POST" th:action="submit">
+	<form method="POST" th:action="submit" th:object="${story}">
 		<div class="form-group">
-			<label class="" th:text="#{createStory.Title}">Titill:</label> <input
+			<label class="" th:text="#{createStory.Title}">Titill:</label> 
+			<input th:value="${story.title}" 
 				class="form-control" type="text" name="title" id="title"
 				placeholder="Titill" />
 		</div>
@@ -38,7 +39,7 @@
 			<div>
 				<label class="" th:text="#{createStory.Text}">Texti:</label>
 			</div>
-			<textarea id="new-entry" name="text" class="form-control" rows="10"
+			<textarea th:text="${story.text}" id="new-entry" name="text" class="form-control" rows="10"
 				cols="40" placeholder="Sagan þín..."></textarea>
 		</div>
 		<input type="submit" value="Senda Inn" />
