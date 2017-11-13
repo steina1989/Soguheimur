@@ -18,9 +18,12 @@
             <li><a href="/login" th:text="#{login.title}">Log In</a></li>
             <li><a href="/compose/newStory" th:text="#{link.NewStory}">New Story</a></li>
             <li><a href="/browse" th:text="#{link.Stories}">Stories</a></li>
-            <li><a th:href="@{/logout}" th:text="#{link.Logout}">Logout</a></li>
+            <li><a href="/login" th:text="#{link.Logout}">Logout</a></li>
           </ul>
         </nav>
       </div>
+      <form action="#" th:action="@{/login}" method="post" th:hidden="true" id="logout">
+      	<input type="submit" value="Logout" />
+      </form>
 </body>
 </html>

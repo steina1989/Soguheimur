@@ -105,10 +105,11 @@ table {
 
 th, td{
    padding-left: 15%;
-   /*padding-right: 15%;*/
+   padding-right: 15%;
    display: inline;
    font-size: 20px;
    color: #2A4040;
+   width: 40px;
 }
 
 label {
