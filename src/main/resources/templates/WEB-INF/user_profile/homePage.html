@@ -34,7 +34,9 @@
 
 		</tr>
 		<tr th:each="story : ${stories}">
-			<td th:text="${story.title}">My story</td>
+			<td>
+				<a th:href="@{'/compose/edit?id=' + ${story.id}}" th:text="${story.title}">My story</a> 
+			</td>
 			<td th:text="${#dates.format(story.date, 'dd-MMM-yy')}">My story</td>
 			<td th:text="${story.rating}">My story</td>
 			
