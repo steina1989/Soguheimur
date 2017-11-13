@@ -19,7 +19,6 @@
 	<tr>
 		<td th:text="#{register.email}">E-mail:</td>
 		<td><input type="text" th:field="*{email}" /></td>
-		<td th:if="${success}" th:text="#{register.success}">Registration success</td>
 	</tr>
 	<tr>
 		<td th:text="#{register.password}">Password:</td>
@@ -28,6 +27,9 @@
 	<tr>
 		<td>
 		<button type="submit" name="Register" th:text="#{register.registerButton}">Register</button></td>
+	</tr>
+	<tr>
+	<td th:if="${success}" th:text="#{register.success}">Registration success</td>
 	</tr>
 	
 	</table>

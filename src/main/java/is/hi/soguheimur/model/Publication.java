@@ -12,6 +12,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -33,6 +34,7 @@ public class Publication {
 	private int rating;
 	private ArrayList<String> tags;
 	@Basic(fetch = FetchType.LAZY )
+	@Column(columnDefinition = "TEXT")
 	private String text;	
 	@ManyToOne(targetEntity=User.class)
 	@JoinColumn(name="user_id")

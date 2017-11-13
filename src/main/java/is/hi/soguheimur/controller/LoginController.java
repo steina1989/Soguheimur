@@ -57,7 +57,9 @@ public class LoginController {
 			userService.save(user);	
 			model.addAttribute("success",true);
 		}
-		model.addAttribute("success",false);
+		else {
+			model.addAttribute("success",false);
+		}
 		
 		return "register";
 	}
