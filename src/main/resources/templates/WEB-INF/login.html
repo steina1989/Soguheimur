@@ -13,6 +13,7 @@
 </head>
 <body>
 	<div th:replace="fragments/header :: header">&nbsp;</div>
+	<div th:replace="fragments/link :: link">&nbsp;</div>
 
 	
 	<h1 th:text="#{login.title}">Login page</h1>
@@ -27,13 +28,11 @@
 			In</button>
 	</form>
 	
-	<a href="/register" th:text="#{link.Register}">Register</a>
-
+	<p th:text="#{link.NewAccount}">New Account</p>
+	<a href="/register" th:text="#{link.Register}">Register</a> 
 	
 
 	<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
-
-	<div th:replace="fragments/link :: link">&nbsp;</div>
 	
 
 </body>

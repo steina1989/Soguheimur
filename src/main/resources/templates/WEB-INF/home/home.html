@@ -13,13 +13,13 @@
 <body>
 	
 	<div th:replace="fragments/header :: header">&nbsp;</div>
+	<div th:replace="fragments/homeLink :: link">&nbsp;</div>
 	
 	<h1 th:text="#{homepage.welcome}">Welcome</h1>
 	
-	<p th:text="#{homepage.info}">Info</p>
-
-    
-	<div th:replace="fragments/homeLink :: link">&nbsp;</div>
+	<p th:text="#{homepage.info1}">Info</p>
+	<p th:text="#{homepage.info2}">Info</p>
+	<p th:text="#{homepage.info3}">Info</p>
 
 </body>
 </html>

@@ -21,8 +21,8 @@
             	<li><a href="/usr/homePage" th:text="#{link.Home}">Home</a></li>
             	<li><a href="/browse" th:text="#{link.Stories}">Stories</a></li>
             	<li>
-            		<form action="#" th:action="@{/login}" method="post">
-      					<input type="submit" id="linkbutton" value="Logout" />
+            		<form action="#" th:action="@{/login}" method="post" id="logoutForm">
+      					<input type="submit" id="logout" value="Logout" />
       				</form>
             	</li>
             

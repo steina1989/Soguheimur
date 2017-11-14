@@ -75,7 +75,7 @@ h1{
 }
 
 p {
-   margin: 0px;
+   margin: 10px;
    padding: 10px;
    padding-left: 15%;
    padding-right: 15%;
@@ -86,14 +86,14 @@ p {
 table {
 	padding: 10%;
 	margin: 3%;
-   width: 80%;
-   padding-left: 15%;
-   padding-right: 15%;
-   font-size: 20px;
-   color: #2A4040;
-   border-collapse: collapse;
-   border: 1px solid #2A4040;
-   border-radius: .2625em; 
+	width: 80%;
+	padding-left: 15%;
+	padding-right: 15%;
+	font-size: 20px;
+	color: #2A4040;
+	border-collapse: collapse;
+	border: 1px solid #2A4040;
+	border-radius: .2625em;
 }
 
 #table{
@@ -105,11 +105,11 @@ table {
 th, td{
 	padding-left: 15%;
 	padding-right: 15%;
-   font-size: 20px;
-   color: #2A4040;
-   width: 100%;
-   border: 1px solid #2A4040;
-   border-radius: .2625em;
+	font-size: 20px;
+	color: #2A4040;
+	width: 100%;
+	border: 1px solid #2A4040;
+	border-radius: .2625em;
 }
 
 form {
@@ -120,6 +120,14 @@ form {
    font-size: 20px;
 }
 
+#username{
+	display: block;
+}
+
+#password{
+	display: block;
+}
+
 fieldset{
   margin: 10px;
   padding: 10px;
@@ -127,14 +135,12 @@ fieldset{
 }
 
 #register{
-	width: 80%;
-	margin: 10px;
-	padding-left: 15%;
-	padding-right: 15%;
+	padding-left: 5%;
+	padding-right: 5%;
 	font-size: 20px;
 	color: #2A4040;
-	border-collapse: collapse;
 	border: none;
+	display: inline;
 }
 
 #title {
@@ -198,40 +204,42 @@ textarea {
 }
 
 button{
-  width: 100px;
-  height: 40px;
-  border: 1px solid #2A4040;
-  border-radius: .2625em;
-  box-shadow: 0 .375em .313em -0.313em rgba(0,0,0,.8), inset 0 .063em rgba(255,255,255,.4), inset 0 -0.188em rgba(0,0,0,.15);
-  margin: 10px;
-  padding: 10px;
-  font-family: 'Gentium Book Basic', serif;
-  background-position: bottom right;
-  background-repeat: no-repeat;
-  background-color: #95E5E5;
-  text-align: center;
-  display: inline-block;
-  font-size: 16px;
-  color: #2A4040;
+	width: 100px;
+	height: 40px;
+	border: 1px solid #2A4040;
+	border-radius: .2625em;
+	box-shadow: 0 .375em .313em -0.313em rgba(0,0,0,.8), inset 0 .063em rgba(255,255,255,.4), inset 0 -0.188em rgba(0,0,0,.15);
+	margin: 10px;
+	padding: 10px;
+	font-family: 'Gentium Book Basic', serif;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	background-color: #95E5E5;
+	text-align: center;
+	display: inline-block;
+	font-size: 16px;
+	color: #2A4040;
 }
 
 button:hover {
-  background-color: #2A4040;
-  color: #95E5E5;
-  box-shadow: 0 .125em rgba(255,255,255,.4), inset 0 .063em rgba(255,255, 255,.4), inset 0 -0.188em #0D331A;
+	background-color: #2A4040;
+	color: #95E5E5;
+	box-shadow: 0 .125em rgba(255,255,255,.4), inset 0 .063em rgba(255,255, 255,.4), inset 0 -0.188em #0D331A;
 }
 
 a {
-   padding-left: 15%;
-   padding-right: 15%;
-   font-size: 20px;
-   color: #2A4040;
+	margin: 10px;
+	padding: 10px;
+	padding-left: 15%;
+	padding-right: 15%;
+	font-size: 20px;
+	color: #2A4040;
 }
 
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     overflow: hidden;
     background-color: #287070;
     box-shadow: 0 .125em rgba(255,255,255,.4), inset 0 .063em rgba(255,255, 255,.4), inset 0 -0.188em #2A4040;
@@ -240,13 +248,14 @@ ul {
 li {
     float: left;
     padding-left: 5%;
-    /*padding-right: 15%;*/
+    margin: 0px;
 }
 
 li a {
-    display: block;
+    display: inline-block;
     color: #7DBFBF;
     text-align: center;
+    margin: 0px;
     padding: 14px 16px;
     text-decoration: none;
     font-family: 'Gentium Book Basic', serif;
@@ -259,23 +268,52 @@ li a:hover {
     box-shadow: 0 .125em rgba(255,255,255,.4), inset 0 .063em rgba(255,255, 255,.4), inset 0 -0.188em #7DBFBF;
 }
 
-li #linkbutton {
-	style: none;
-  border: none;
-  margin: 0px;
-  padding: 0px;
-  background: none;
-  display: block;
-  font-size: 20px;
-  color: #7DBFBF;
-  text-decoration: underline;
-   background-position: center;
-   background-repeat: no-repeat;
-   overflow:hidden;
+#logoutForm {
+	border: none;
+	border-radius: 0;
+	margin: 0;
+	padding: 14px 16px;
+	background: none;
+	display: inline-block;
+	font-size: 20px;
+	color: #7DBFBF;
+	outline: none;
+	outline-offset: 0;
+	width: inherit;
+	height: inherit;
+	text-align: center;
+	box-shadow: none;
+	
   }
 
-li #linkbutton:hover {
+#logoutForm:hover {
+	margin: 0;
+	padding: 14px 16px;
+	width: inherit;
+	height: inherit;
     background-color: #A6FFFF;
     color: #2A4040;
     box-shadow: 0 .125em rgba(255,255,255,.4), inset 0 .063em rgba(255,255, 255,.4), inset 0 -0.188em #7DBFBF;
+}
+
+#logout{
+	border: none;
+	border-radius: 0;
+	margin: 0;
+	padding: 0;
+	background: none;
+	font-size: 20px;
+	color: #7DBFBF;
+	outline: none;
+	outline-offset: 0;
+	width: inherit;
+	height: inherit;
+	text-align: center;
+	box-shadow: none;
+}
+
+#logout:hover {
+	
+    color: #2A4040;
+    
 }

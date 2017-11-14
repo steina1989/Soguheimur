@@ -12,20 +12,22 @@
 </head>
 <body>
 	<div th:replace="fragments/header :: header">&nbsp;</div>
+	<div th:replace="fragments/link :: link">&nbsp;</div>
+	
 	<h1 th:text="#{register.title}">Login page</h1>
 	
-	<form th:action="@{/register}" method="post" th:object="${user}" class="register">
-	<table>
+	<form th:action="@{/register}" method="post" th:object="${user}">
+	<table id="register">
 	<tr>
-		<td th:text="#{register.email}">E-mail:</td>
-		<td><input type="text" th:field="*{email}" /></td>
+		<td id="register" th:text="#{register.email}">E-mail:</td>
+		<td id="register"><input type="text" th:field="*{email}" /></td>
 	</tr>
 	<tr>
-		<td th:text="#{register.password}">Password:</td>
-		<td><input type="password" th:field="*{passwordHash}" /></td>
+		<td id="register" th:text="#{register.password}">Password:</td>
+		<td id="register"><input type="password" th:field="*{passwordHash}" /></td>
 	</tr>
 	<tr>
-		<td>
+		<td id="register">
 		<button type="submit" name="Register" th:text="#{register.registerButton}">Register</button></td>
 	</tr>
 	<tr>
@@ -34,8 +36,6 @@
 	
 	</table>
 	</form>
-	
-	<div th:replace="fragments/link :: link">&nbsp;</div>
 
 </body>
 </html>
