@@ -25,7 +25,10 @@ import is.hi.soguheimur.repository.UserRepository;
 @Service
 public class UserService   {
 	@Autowired UserRepository userRep;
-
+	
+	public boolean test() {
+		return true;
+	}
 
     public boolean checkValidName(String name) {
     	return true;
