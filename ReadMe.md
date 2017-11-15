@@ -4,7 +4,7 @@ Söguheimur is an online space for writing and browsing stories.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
 ### Prerequisites
 
@@ -21,6 +21,7 @@ git clone https://github.com/steina1989/Soguheimur.git
 ```
 mvn spring-boot:run
 ```
+Point your browser to localhost:8080
 
 ## Built With
 
