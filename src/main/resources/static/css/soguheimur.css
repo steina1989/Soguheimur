@@ -86,7 +86,7 @@ p {
 table {
 	padding: 10%;
 	margin: 3%;
-	width: 80%;
+	width: 50%;
 	padding-left: 15%;
 	padding-right: 15%;
 	font-size: 20px;
@@ -94,6 +94,12 @@ table {
 	border-collapse: collapse;
 	border: 1px solid #2A4040;
 	border-radius: .2625em;
+	white-space: normal;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-center;
+	align-content: space-between;
 }
 
 #table2{
@@ -101,9 +107,17 @@ table {
 }
 
 #table{
+	margin: 0px;
+	padding: 0px;
 	padding-left: 0%;
 	padding-right: 0%;
 	font-size: 20px;
+	word-wrap: normal;
+	white-space: pre;
+	width: 50%;
+	justify-content: flex-start;
+	align-items: flex-center;
+	align-content: space-between;
 }
 
 th, td{
@@ -111,9 +125,11 @@ th, td{
 	padding-right: 15%;
 	font-size: 20px;
 	color: #2A4040;
-	width: 100%;
 	border: 1px solid #2A4040;
 	border-radius: .2625em;
+	word-wrap: normal;
+	width: 50%;
+	white-space: pre;
 }
 
 form {

@@ -17,7 +17,6 @@
           <ul sec:authorize="isAuthenticated()">
           	
           		<li><a href="/" th:text="#{link.HomePage}">HomePage</a></li>
-            	<li><a href="/login" th:text="#{login.title}">Log In</a></li>
             	<li><a href="/browse?id=-1" th:text="#{link.Stories}">Stories</a></li>
             	<li><a href="/usr/homePage" th:text="#{link.Home}">Home</a></li>
             	<li><a href="/compose/newStory" th:text="#{link.NewStory}">New Story</a></li>
