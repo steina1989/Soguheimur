@@ -18,6 +18,7 @@
           	
           		<li><a href="/" th:text="#{link.HomePage}">HomePage</a></li>
             	<li><a href="/login" th:text="#{login.title}">Log In</a></li>
+            	<li><a href="/browse?id=-1" th:text="#{link.Stories}">Stories</a></li>
             	<li><a href="/usr/homePage" th:text="#{link.Home}">Home</a></li>
             	<li>
             		<form action="#" th:action="@{/logout}" method="post" id="logoutForm">
@@ -30,7 +31,7 @@
           	
           		<li><a href="/" th:text="#{link.HomePage}">HomePage</a></li>
             	<li><a href="/login" th:text="#{login.title}">Log In</a></li>
-            	<li><a href="/browse" th:text="#{link.Stories}">Stories</a></li>
+            	<li><a href="/browse?id=-1" th:text="#{link.Stories}">Stories</a></li>
             
           </ul>
         </nav>

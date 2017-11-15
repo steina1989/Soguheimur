@@ -96,6 +96,10 @@ table {
 	border-radius: .2625em;
 }
 
+#table2{
+	width: 60%;
+}
+
 #table{
 	padding-left: 0%;
 	padding-right: 0%;
