@@ -103,7 +103,12 @@ table {
 }
 
 #table2{
-	width: 60%;
+	width: 50%;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-center;
+	align-content: space-between;
 }
 
 #table{
@@ -115,6 +120,8 @@ table {
 	word-wrap: normal;
 	white-space: pre;
 	width: 50%;
+	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: flex-start;
 	align-items: flex-center;
 	align-content: space-between;
@@ -129,7 +136,11 @@ th, td{
 	border-radius: .2625em;
 	word-wrap: normal;
 	width: 50%;
-	white-space: pre;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-center;
+	align-content: space-between;
 }
 
 form {
