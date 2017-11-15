@@ -21,6 +21,7 @@ git clone https://github.com/steina1989/Soguheimur.git
 ```
 mvn spring-boot:run
 ```
+Point your browser to localhost:8080
 
 ## Built With
 
