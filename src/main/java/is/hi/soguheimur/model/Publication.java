@@ -96,6 +96,15 @@ public class Publication {
 		this.tags = tags;
 	}
 
+	public void setUser(User user) {
+		this.user = user;		
+	}
+	
+	public User getUser()
+	{
+		return this.user;
+	}
+
 
 	
 	

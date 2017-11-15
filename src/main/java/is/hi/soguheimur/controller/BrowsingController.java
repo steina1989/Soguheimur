@@ -1,5 +1,6 @@
 package is.hi.soguheimur.controller;
 
+import java.util.List;
 import java.util.Locale;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import is.hi.soguheimur.model.Publication;
 import is.hi.soguheimur.services.PublicationService;
@@ -41,9 +43,18 @@ public class BrowsingController {
 	/*
 	 * Returns a story by id.
 	 */
-	@RequestMapping(value = "/{id}")
-	public String viewStory(@PathVariable("id") long id, ModelMap model) {
+	@RequestMapping(value = "")
+	public String viewStory(@RequestParam(value="id", required=false) long id, ModelMap model) {
 
+		
+		if (id == -1) {
+			List<Publication> pubs = pubService.findAll();
+			System.out.println("whoa");
+			model.addAttribute("success", true);
+			model.addAttribute("pub", pubs);	
+			return "browse/viewStories";
+		}
+		
 		Publication pub = pubService.findById(id);
 		if (pub != null) {
 			model.addAttribute("success", true);

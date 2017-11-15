@@ -69,6 +69,19 @@ public class ComposeController {
 		map.addAttribute("story", pub);
 		return parent + "composer";
 	}
+	
+	/**
+	 * Loads a user story by id into the editor if the user owns it.
+	 * @param id
+	 * @return
+	 */
+	@RequestMapping(value = "/edit", method = RequestMethod.POST)
+	public String editStory(ModelMap map) {
+		Publication pub = (Publication)map.get("publication");
+		System.out.println(pub.getText());
+		//map.addAttribute("story", pub);
+		return parent + "composer";
+	}
 
 
 }

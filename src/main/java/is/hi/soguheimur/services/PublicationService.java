@@ -1,6 +1,8 @@
 
 package is.hi.soguheimur.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,6 +27,11 @@ public class PublicationService {
 
 	public Publication findById(long id) {
 		return pubRep.findById(id);
+	}
+
+	public List<Publication> findAll() {
+
+		return pubRep.findAll();
 	}
     
     
