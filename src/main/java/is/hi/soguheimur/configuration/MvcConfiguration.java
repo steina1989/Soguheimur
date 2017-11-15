@@ -32,7 +32,7 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter {
 	public ClassLoaderTemplateResolver templateResolver() {
 		ClassLoaderTemplateResolver templateResolver = new ClassLoaderTemplateResolver();
 		templateResolver.setPrefix("templates/WEB-INF/"); // 
-		templateResolver.setCacheable(false); 
+		templateResolver.setCacheable(true); 
 		templateResolver.setSuffix(".html"); 
 		templateResolver.setTemplateMode("HTML5");
 		templateResolver.setCharacterEncoding("UTF-8");
