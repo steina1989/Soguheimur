@@ -122,6 +122,7 @@ table {
 	justify-content: flex-start;
 	align-items: flex-center;
 	align-content: space-between;
+	word-break: break-all;
 }
 
 tr{
@@ -129,7 +130,7 @@ tr{
 	padding-right: 1%;
 	font-size: 20px;
 	color: #2A4040;
-	word-wrap: normal;
+	word-wrap: wrap;
 	width: 50%;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -141,12 +142,13 @@ tr{
 th{
 	font-size: 20px;
 	color: #2A4040;
-	word-wrap: normal;
+	word-wrap: wrap;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	align-items: flex-center;
 	align-content: space-between;
+	word-break: break-all;
 }
 
 td{
@@ -154,12 +156,13 @@ td{
 	padding-right: 1%;
 	font-size: 20px;
 	color: #2A4040;
-	word-wrap: normal;
+	word-wrap: wrap;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	align-items: flex-center;
 	align-content: space-between;
+	
 }
 
 form {
