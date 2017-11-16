@@ -84,16 +84,13 @@ p {
 }
 
 table {
-	padding: 10%;
 	margin: 3%;
 	width: 50%;
-	padding-left: 15%;
-	padding-right: 15%;
+	padding-left: 6%;
+	padding-right: 1%;
 	font-size: 20px;
 	color: #2A4040;
 	border-collapse: collapse;
-	border: 1px solid #2A4040;
-	border-radius: .2625em;
 	white-space: normal;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -127,15 +124,37 @@ table {
 	align-content: space-between;
 }
 
-th, td{
-	padding-left: 15%;
-	padding-right: 15%;
+tr{
+	padding-left: 6%;
+	padding-right: 1%;
 	font-size: 20px;
 	color: #2A4040;
-	border: 1px solid #2A4040;
-	border-radius: .2625em;
 	word-wrap: normal;
 	width: 50%;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-center;
+	align-content: space-between;
+}
+
+th{
+	font-size: 20px;
+	color: #2A4040;
+	word-wrap: normal;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-center;
+	align-content: space-between;
+}
+
+td{
+	padding-left: 6%;
+	padding-right: 1%;
+	font-size: 20px;
+	color: #2A4040;
+	word-wrap: normal;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: flex-start;
