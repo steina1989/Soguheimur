@@ -19,6 +19,14 @@
 	<form th:action="@{/register}" method="post" th:object="${user}">
 	<table id="register">
 	<tr>
+		<td th:text="#{register.name}">Name:</td>
+		<td><input type="text" th:field="*{fullName}" /></td>
+	</tr>
+	<tr>
+		<td th:text="#{register.userName}">UserName:</td>
+		<td><input type="text" th:field="*{userName}" /></td>
+	</tr>
+	<tr>
 		<td id="register" th:text="#{register.email}">E-mail:</td>
 		<td id="register"><input type="text" th:field="*{email}" /></td>
 	</tr>
