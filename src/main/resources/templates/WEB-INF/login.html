@@ -20,7 +20,7 @@
 
 	<p th:if="${loginError}" th:class="error" th:utext="#{login.incorrect}">Wrong user or password</p>
 	<form th:action="@{/login}" method="post">
-		<label for="username" th:text="#{login.userName}">Username</label>: <input
+		<label for="email" th:text="#{login.email}">E-mail</label>: <input
 			type="text" id="username" name="username" autofocus="autofocus" /> <br />
 		<label for="password" th:text="#{login.password}">Password</label>: <input
 			type="password" id="password" name="password" /> <br />
