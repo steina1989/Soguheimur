@@ -26,7 +26,7 @@ import static org.mockito.Mockito.*;
  * e) Framkvæmið prófanir á controller með gefnu gildi á kalli á aðferð í service.
  *    Kallið test klasann WebMockTest.java
 */
-
+@RunWith(SpringRunner.class)
 @WebMvcTest (SoguheimurErrorController.class)
 public class WebMockTest {
 
@@ -57,7 +57,7 @@ this.mockMvc.perform(get("/error"))
 	.andExpect(status()
 	.isOk())
 	.andExpect(content()
-.string(containsString("Vinsamlegast"))); // string sem á a vera inn í /error
+.string(containsString("message"))); // string sem á a vera inn í /error
 }
 ///*
 //------------------------------------------------------------
@@ -71,7 +71,7 @@ this.mockMvc.perform(get("/error"))
 	.andExpect(status()
 	.isOk())
 	.andExpect(content()
-.string(containsString("Vinsamlegast"))); // string sem á a vera inn í /error
+.string(containsString("message"))); // string sem á a vera inn í /error
 
 }
 //---------------------------------------------------------------
@@ -85,7 +85,7 @@ this.mockMvc.perform(get("/error"))
 	.andExpect(status()
 	.isOk())
 	.andExpect(content()
-.string(containsString("Vinsamlegast")));  // string sem á a vera inn í /error
+.string(containsString("message")));  // string sem á a vera inn í /error
 
 }
 //*/
